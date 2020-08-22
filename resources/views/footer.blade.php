@@ -1,0 +1,1 @@
+<x-header title="This is the Footer Page"/>
