@@ -26,15 +26,15 @@
 
 <body>
 	<!-- including the header -->
-	<x-header status="home"/>
+	<x-header status="home" />
 	<section class="home-slider owl-carousel">
 		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/<?php echo url('/'); ?>/images/bg_1.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Education Needs Complete Solution</h1>
-						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+						<h1 class="mb-4">Education: Numerous ways to aquire!</h1>
+						<p>Some methods are teaching, training, storytelling, discussion and directed research</p>
 						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
 					</div>
 				</div>
@@ -46,8 +46,8 @@
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">University, College School Education</h1>
-						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+						<h1 class="mb-4">Education: Not limited to Textbooks</h1>
+						<p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits.</p>
 						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">Qualified Teachers</h3>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+							<p>Our school has qualified teachers having specific knowlege of the area they have chosen.Most of our teachers are also experienced with years of teaching experience.</p>
 						</div>
 					</div>
 				</div>
@@ -76,7 +76,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">Technical Education</h3>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+							<p>Technology is a key to various things in today's world.Our schools offers Computer Engineering to students willing to learn and explore more in technology.</p>
 						</div>
 					</div>
 				</div>
@@ -87,7 +87,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">Lab &amp; Library</h3>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+							<p>Practical knowlege alongside theory is very necessary in order to understand the concept. We have well equipped library and labs to experiment for every students.</p>
 						</div>
 					</div>
 				</div>
@@ -98,7 +98,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">Extra Cirricular Activies</h3>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+							<p>Learning should be beyond the 4 walls of classroom, extra cirricular activities helps student boost their skills be it sports, singing, dancing and other.</p>
 						</div>
 					</div>
 				</div>
@@ -115,7 +115,7 @@
 				<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
 					<h2 class="mb-4">Principle Message</h2>
 					<blockquote class="blockquote">
-					<p>मनसुन पिक चरणबाट बिस्तारै ओरालो लाग्दै गएकाले भारी वर्षाको सम्भावनासमेत कम हुँदै महाशाखाले जनाएको छ। महाशाखाले ५० मिलिमिटरभन्दा धेरै वर्षा भएको क्षेत्रलाई भारी वर्षाको रुपमा मापन गर्दै आएको छ। नेपालमा मनसुन १० जुनदेखि सुरु भई २३ सेप्टेम्बरमा सकिने भएकाले अब मनसुन सकिन ४० दिन बाँकी छ। .</p>
+						<p>मनसुन पिक चरणबाट बिस्तारै ओरालो लाग्दै गएकाले भारी वर्षाको सम्भावनासमेत कम हुँदै महाशाखाले जनाएको छ। महाशाखाले ५० मिलिमिटरभन्दा धेरै वर्षा भएको क्षेत्रलाई भारी वर्षाको रुपमा मापन गर्दै आएको छ। नेपालमा मनसुन १० जुनदेखि सुरु भई २३ सेप्टेम्बरमा सकिने भएकाले अब मनसुन सकिन ४० दिन बाँकी छ। .</p>
 					</blockquote>
 				</div>
 
@@ -200,53 +200,53 @@
 				<div class="col-md-3 course ftco-animate">
 					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-1.jpg);"></div>
 					<div class="text pt-4">
-						<p class="meta d-flex">
+						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
 							<span><i class="icon-table mr-2"></i>10 seats</span>
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
-						</p>
-						<h3><a href="#">Electric Engineering</a></h3>
+						</p> -->
+						<h3><a href="#">Computer Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<p><a href="#" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
 					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-2.jpg);"></div>
 					<div class="text pt-4">
-						<p class="meta d-flex">
+						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
 							<span><i class="icon-table mr-2"></i>10 seats</span>
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
-						</p>
-						<h3><a href="#">Electric Engineering</a></h3>
+						</p> -->
+						<h3><a href="#">Physics Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<p><a href="#" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
 					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-3.jpg);"></div>
 					<div class="text pt-4">
-						<p class="meta d-flex">
+						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
 							<span><i class="icon-table mr-2"></i>10 seats</span>
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
-						</p>
-						<h3><a href="#">Electric Engineering</a></h3>
+						</p> -->
+						<h3><a href="#">Chemistry Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<p><a href="#" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
 					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-4.jpg);"></div>
 					<div class="text pt-4">
-						<p class="meta d-flex">
+						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
 							<span><i class="icon-table mr-2"></i>10 seats</span>
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
-						</p>
-						<h3><a href="#">Electric Engineering</a></h3>
+						</p> -->
+						<h3><a href="#">Electronics Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<p><a href="#" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 			</div>
@@ -309,7 +309,7 @@
 							<h3>Stella Smith</h3>
 							<span class="position mb-2">Art Teacher</span>
 							<div class="faded">
-									<ul class="ftco-social text-center">
+								<ul class="ftco-social text-center">
 									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
 									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
@@ -350,7 +350,7 @@
 				<div class="col-md-6 py-5 px-md-5">
 					<div class="py-md-5">
 						<div class="heading-section heading-section-white ftco-animate mb-5">
-							<h2 class="mb-4">Request A Quote</h2>
+							<h2 class="mb-4">Send Us Your Query</h2>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 						</div>
 						<form action="#" class="appointment-form ftco-animate">
@@ -368,7 +368,7 @@
 										<div class="select-wrap">
 											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 											<select name="" id="" class="form-control">
-												<option value="">Select Your Course</option>
+												<option value="">Select The Topic</option>
 												<option value="">Art Lesson</option>
 												<option value="">Language Lesson</option>
 												<option value="">Music Lesson</option>
@@ -387,7 +387,7 @@
 									<textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
 								</div>
 								<div class="form-group ml-md-4">
-									<input type="submit" value="Request A Quote" class="btn btn-primary py-3 px-4">
+									<input type="submit" value="Submit Your Query" class="btn btn-primary py-3 px-4">
 								</div>
 							</div>
 						</form>
@@ -680,7 +680,7 @@
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;<script>
 							document.write(new Date().getFullYear());
-						</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						</script> All rights reserved <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Mohan & Kushal</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 				</div>
