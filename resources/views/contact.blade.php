@@ -25,8 +25,7 @@
 </head>
 
 <body>
-  <x-header />
-  <!-- END nav -->
+  <x-header status="contact"/>
 
   <section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo url('/'); ?>/images/bg_1.jpg');">
     <div class="overlay"></div>

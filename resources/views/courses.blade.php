@@ -24,7 +24,7 @@
   </head>
   <body>
 	  	<!-- including the header -->
-	<x-header />    
+	<x-header status="courses"/>    
     <section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo url('/'); ?>/images/bg_1.jpg');">
       <div class="overlay"></div>
       <div class="container">

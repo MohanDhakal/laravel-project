@@ -45,12 +45,52 @@
 		</form>
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav mr-auto">
+				@if($status=='home')
 				<li class="nav-item active"><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item"><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-				<li class="nav-item"><a href="<?php echo url('courses'); ?>" class="nav-link">Courses</a></li>
-				<li class="nav-item"><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item"><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-				<li class="nav-item"><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('courses'); ?>" class="nav-link">Courses</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				@elseif($status=='about')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item active"><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('courses'); ?>" class="nav-link">Courses</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				@elseif($status=='courses')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item active"><a href="<?php echo url('courses'); ?>" class="nav-link">Courses</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+		
+				@elseif($status=='staff')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('courses'); ?>" class="nav-link">Courses</a></li>
+				<li class="nav-item active"><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+		
+				@elseif($status=='blog')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('courses'); ?>" class="nav-link">Courses</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item active"><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+		
+				@elseif($status=='contact')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('courses'); ?>" class="nav-link">Courses</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item active "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				@endif
 			</ul>
 		</div>
 	</div>

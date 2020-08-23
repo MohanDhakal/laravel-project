@@ -11,10 +11,11 @@ class Header extends Component
      *
      * @return void
      */
-//we can pass the data in the constructor while building this page
-    public function __construct()
-    {
 
+    public $status;
+    public function __construct($status)
+    {
+        $this->status = $status;
     }
 
     /**

@@ -25,8 +25,6 @@
 </head>
 
 <body>
-  <!-- including the header -->
-  <x-header />
 
 
   <section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo url('/'); ?>/images/bg_1.jpg');">
@@ -366,8 +364,6 @@
       </div>
     </div>
   </footer>
-
-
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
