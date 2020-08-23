@@ -64,7 +64,7 @@
 							<span class="flaticon-teacher"></span>
 						</div>
 						<div class="media-body p-2 mt-3">
-							<h3 class="heading">Certified Teachers</h3>
+							<h3 class="heading">Qualified Teachers</h3>
 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
 						</div>
 					</div>
@@ -75,7 +75,7 @@
 							<span class="flaticon-reading"></span>
 						</div>
 						<div class="media-body p-2 mt-3">
-							<h3 class="heading">Special Education</h3>
+							<h3 class="heading">Technical Education</h3>
 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
 						</div>
 					</div>
@@ -86,7 +86,7 @@
 							<span class="flaticon-books"></span>
 						</div>
 						<div class="media-body p-2 mt-3">
-							<h3 class="heading">Book &amp; Library</h3>
+							<h3 class="heading">Lab &amp; Library</h3>
 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
 						</div>
 					</div>
@@ -97,7 +97,7 @@
 							<span class="flaticon-diploma"></span>
 						</div>
 						<div class="media-body p-2 mt-3">
-							<h3 class="heading">Sport Clubs</h3>
+							<h3 class="heading">Extra Cirricular Activies</h3>
 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
 						</div>
 					</div>
@@ -115,7 +115,7 @@
 				<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
 					<h2 class="mb-4">Principle Message</h2>
 					<blockquote class="blockquote">
-					<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>
+					<p>मनसुन पिक चरणबाट बिस्तारै ओरालो लाग्दै गएकाले भारी वर्षाको सम्भावनासमेत कम हुँदै महाशाखाले जनाएको छ। महाशाखाले ५० मिलिमिटरभन्दा धेरै वर्षा भएको क्षेत्रलाई भारी वर्षाको रुपमा मापन गर्दै आएको छ। नेपालमा मनसुन १० जुनदेखि सुरु भई २३ सेप्टेम्बरमा सकिने भएकाले अब मनसुन सकिन ४० दिन बाँकी छ। .</p>
 					</blockquote>
 				</div>
 
@@ -138,7 +138,7 @@
 				</div>
 				<div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
 					<h2 class="mb-4">Tri Shaheed Model School</h2>
-					<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+					<p>मनसुन पिक चरणबाट बिस्तारै ओरालो लाग्दै गएकाले भारी वर्षाको सम्भावनासमेत कम हुँदै महाशाखाले जनाएको छ। महाशाखाले ५० मिलिमिटरभन्दा धेरै वर्षा भएको क्षेत्रलाई भारी वर्षाको रुपमा मापन गर्दै आएको छ। नेपालमा मनसुन १० जुनदेखि सुरु भई २३ सेप्टेम्बरमा सकिने भएकाले अब मनसुन सकिन ४० दिन बाँकी छ। .</p>
 					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 				</div>
 			</div>
@@ -271,7 +271,6 @@
 							<h3>Bianca Wilson</h3>
 							<span class="position mb-2">Teacher</span>
 							<div class="faded">
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 								<ul class="ftco-social text-center">
 									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -291,7 +290,6 @@
 							<h3>Mitch Parker</h3>
 							<span class="position mb-2">English Teacher</span>
 							<div class="faded">
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 								<ul class="ftco-social text-center">
 									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -311,8 +309,7 @@
 							<h3>Stella Smith</h3>
 							<span class="position mb-2">Art Teacher</span>
 							<div class="faded">
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social text-center">
+									<ul class="ftco-social text-center">
 									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
 									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
@@ -331,7 +328,6 @@
 							<h3>Monshe Henderson</h3>
 							<span class="position mb-2">Science Teacher</span>
 							<div class="faded">
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 								<ul class="ftco-social text-center">
 									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
