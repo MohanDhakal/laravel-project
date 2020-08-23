@@ -11,9 +11,14 @@ class detail extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $imageUri;
+    public $title;
+    public $content;
+    public function __construct($uri, $title, $content)
     {
-        //
+        $this->imageUri = $uri;
+        $this->title = $title;
+        $this->content = $content;
     }
 
     /**
