@@ -35,7 +35,7 @@ Route::view('teacher','teacher');
 Route::view('blog-single','blog-single');
 Route::view('blog','blog');
 Route::view('blog-single','blog-single');
-Route::view('courses','courses');
+Route::view('gallery','gallery');
 Route::view('contact','contact');
 
 Route::view('header','components/header');
