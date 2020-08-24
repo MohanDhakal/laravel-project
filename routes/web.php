@@ -37,7 +37,8 @@ Route::view('blog','blog');
 Route::view('blog-single','blog-single');
 Route::view('courses','courses');
 Route::view('contact','contact');
-
+Route::view('physics_lab','highlights/physics_lab');
+Route::view('chemistry_lab','highlights/chemistry_lab');
 Route::view('header','components/header');
 
 // Route::view('sample','sample',['name'=>'ram and sita']);

@@ -14,9 +14,9 @@ class Detail extends Component
     public $imageUri;
     public $title;
     public $content;
-    public function __construct($uri, $title, $content)
+    public function __construct($imageUri, $title, $content)
     {
-        $this->imageUri = $uri;
+        $this->imageUri = $imageUri;
         $this->title = $title;
         $this->content = $content;
     }
