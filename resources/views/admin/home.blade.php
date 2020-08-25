@@ -1,7 +1,4 @@
-use Illuminate\Support\Facades\Auth;
 @extends('layouts.app')
-
-<h2>{{Auth::user()}}</h2>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
