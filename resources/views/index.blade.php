@@ -46,7 +46,7 @@
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Education: Not limited to Textbooks</h1>
+						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
 						<p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits.</p>
 						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
 					</div>

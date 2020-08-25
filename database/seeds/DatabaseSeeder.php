@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
