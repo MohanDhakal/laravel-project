@@ -27,11 +27,9 @@ Route::view('/contact', 'contact');
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
 
-
-
 Auth::routes(['register' => false]);
 Route::get('admin/home', 'HomeController@index')->name('home');
-
+Route::get('gallery','GalleryController@index');
 Route::namespace('Auth')->group(function () {
     //Login Routes
     Route::get('/login', 'LoginController@showLoginForm')->name('login');

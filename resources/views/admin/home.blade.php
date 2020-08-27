@@ -16,6 +16,7 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
+            <a href="filemanager">Go To FileManager</a>
         </div>
     </div>
 </div>

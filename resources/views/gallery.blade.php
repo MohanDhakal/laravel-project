@@ -1,6 +1,5 @@
 </!DOCTYPE html>
 <html>
-
 <head>
     <title>Gallery</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -30,56 +29,13 @@
     <div class=" container page-top ">
 
         <div class="row">
-
-
+            @foreach($images as $image)
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid " alt="">
-
+                <a href="{{$image->absolute_url}}" class="fancybox" rel="ligthbox">
+                    <img src="{{$image->absolute_url}}" class="zoom img-fluid " alt="">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid " alt="">
-
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid " alt="">
-
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid " alt="">
-
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid " alt="">
-
-                </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid" alt="">
-                </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img src="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid " alt="">
-                </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid " alt="">
-                </a>
-            </div>
+            @endforeach
         </div>
     </div>
 
@@ -87,21 +43,20 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="<?php echo url('/'); ?>/js/jquery.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/popper.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/bootstrap.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/jquery.easing.1.3.js"></script>
-	<script src="<?php echo url('/'); ?>/js/jquery.waypoints.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/jquery.stellar.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/owl.carousel.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/jquery.magnific-popup.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/aos.js"></script>
-	<script src="<?php echo url('/'); ?>/js/jquery.animateNumber.min.js"></script>
-	<script src="<?php echo url('/'); ?>/js/scrollax.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-	<script src="<?php echo url('/'); ?>/js/google-map.js"></script>
-	<script src="<?php echo url('/'); ?>/js/main.js"></script>
-
+    <script src="<?php echo url('/'); ?>/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/popper.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.easing.1.3.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.stellar.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/owl.carousel.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.magnific-popup.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/aos.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.animateNumber.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="<?php echo url('/'); ?>/js/google-map.js"></script>
+    <script src="<?php echo url('/'); ?>/js/main.js"></script>
     <script src="<?php echo url('/'); ?>/js/gallery.js"></script>
 </body>
 
