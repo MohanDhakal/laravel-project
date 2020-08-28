@@ -7,14 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/open-iconic-bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/animate.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/magnific-popup.css">
-
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/aos.css">
 
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/ionicons.min.css">
@@ -22,6 +21,7 @@
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/flaticon.css">
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/icomoon.css">
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/style.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
 </head>
 
 <body>
@@ -186,9 +186,117 @@
 			</div>
 		</div>
 	</section>
+	<!-- events list section start -->
 
+
+	<section class="col-lg-12 container" style="padding: 10px;background-color: #dadde6;">
+		<h1>Events</h1>
+		<div class="row">
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span>23</span><span>feb</span>
+					</time>
+				</section>
+				<section class="card-cont">
+
+					<h3>live in sydney</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>wednesday 28 december 2014</span>
+							<span>08:55pm to 12:00 am</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							nexen square for people australia, sydney
+						</p>
+					</div>
+				</section>
+			</article>
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span>23</span><span>feb</span>
+					</time>
+				</section>
+				<section class="card-cont">
+
+					<h3>corner obsest program</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>wednesday 28 december 2014</span>
+							<span>08:55pm to 12:00 am</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							nexen square for people australia, sydney
+						</p>
+					</div>
+				</section>
+			</article>
+		</div>
+		<div class="row">
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span>23</span><span>feb</span>
+					</time>
+				</section>
+				<section class="card-cont">
+
+					<h3>music kaboom festivel</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>wednesday 28 december 2014</span>
+							<span>08:55pm to 12:00 am</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							nexen square for people australia, sydney
+						</p>
+					</div>
+				</section>
+			</article>
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span>23</span><span>feb</span>
+					</time>
+				</section>
+				<section class="card-cont">
+
+					<h3>hello dubai festivel</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>wednesday 28 december 2014</span>
+							<span>08:55pm to 12:00 am</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							nexen square for people australia, sydney
+						</p>
+					</div>
+				</section>
+			</article>
+		</div>
+	</div>
+</section>
+	<!-- event section closed -->
 
 	<section class="ftco-section">
+		<style background: orange></style>
 		<div class="container-fluid px-4">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
@@ -207,7 +315,7 @@
 						</p> -->
 						<h3><a href="#">Computer Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						<p><a href="physics_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
@@ -251,6 +359,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	</section>
 
 	<section class="ftco-section bg-light">

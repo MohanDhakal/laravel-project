@@ -21,6 +21,10 @@ Route::get('/', function () {
 //     return view('sample');
 // });
 
+Route::get('/admin_index', function () {
+    return view('admin_index');
+});
+
 Route::get('/sample', function () {
     return view('sample',[
         'name'=>'John Doe'
@@ -37,8 +41,10 @@ Route::view('blog','blog');
 Route::view('blog-single','blog-single');
 Route::view('gallery','gallery');
 Route::view('contact','contact');
-
+Route::view('physics_lab','highlights/physics_lab');
+Route::view('chemistry_lab','highlights/chemistry_lab');
 Route::view('header','components/header');
+
 
 // Route::view('sample','sample',['name'=>'ram and sita']);
 //alternative syntax
