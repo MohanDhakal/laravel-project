@@ -26,9 +26,10 @@ class NewsController extends Controller
             'title' => 'bail|required|max:255',
             'content' => 'required',
         ]);
+        //customizing error bag
         $errors = $this->getErrorBag();
         $errors->add('title', 'Title cannot be empyty');
-        $errors->add('title', 'Content cannot be empty');
+        $errors->add('content', 'Content cannot be empty');
 
         //add new news to the database
         $dateTime = Carbon::now();
@@ -43,7 +44,7 @@ class NewsController extends Controller
         }
         if ($image != null) {
             $imageName = $image->getClientOriginalName();
-            $image_path = $file->storeAs('images', $dateTime->toDateTimeString() . $imageName);
+            $image_path = $image->storeAs('images', $dateTime->toDateTimeString() . $imageName);
             $news->image_uri = $image_path;
         }
         $news->title = $request->input('title');

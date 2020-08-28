@@ -8,12 +8,13 @@
 
             <div class="list-group w-100">
                 <a href="#" class="list-group-item  active">Dashboard</a>
-                <a href="#" class="list-group-item">Add News</a>
-                <a href="#" class="list-group-item">Add new Event</a>
+                <a href="#addNews" class="list-group-item">Add News</a>
+                <a href="#addEvent" class="list-group-item">Add new Event</a>
+                <a href="#addStaff" class="list-group-item">Add new Staff</a>
             </div>
         </aside>
 
-        <div class="col-10 px-0">
+        <div class="col-10 px-3 py-2" id="addNews">
             <div class="card">
 
                 <div class="page-wrapper bg-dark p-t-100 p-b-50">
@@ -81,6 +82,131 @@
                 </div>
             </div>
         </div>
+        <!-- end col-10 add events -->
+
+        <div class="col-2">
+
+        </div>
+        <!-- Area Chart -->
+        <div class="col-xl-10 col-lg-5" id="addEvent">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Add Event</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="container">
+                        <form action="action_page.php">
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="title">Title</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="title" name="title" placeholder="Title of event..">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="subject">Description</label>
+                                </div>
+                                <div class="col-75">
+                                    <textarea id="discription" maxlength="100" name="discription" placeholder="Write something.." style="height:200px"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="datetime">Event (Date and Time)</label>
+                                </div>
+                                <div class="col-75">
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="title">Venue</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="venue" name="venue" placeholder="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="submit" value="Add Event">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--end of second event-->
+      <div class="col-2"></div>
+        <div class="col-xl-10 col-lg-5" id="addStaff">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Add Staff</h6>
+
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="container">
+                        <form action="action_page.php">
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="name">Name</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="name" name="name">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="subject">Post</label>
+                                </div>
+                                <div class="col-75">
+                                    <select name="post" id="post">
+                                        <option value="volvo">Principal</option>
+                                        <option value="saab">Supervisor</option>
+                                        <option value="opel">Teacher</option>
+                                        <option value="audi">Librarian</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="subject">Description</label>
+                                </div>
+                                <div class="col-75">
+                                    <textarea id="discription" maxlength="50" name="discription" placeholder="Write something.." style="height:200px"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="name">Image</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="link" id="image" name="image">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <input type="submit" value="Add Staff">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-@endsection
+    @endsection

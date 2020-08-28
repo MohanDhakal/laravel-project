@@ -18,11 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-<<<<<<< HEAD
-// Route::get('/sample/{id}', function ($id) {
-//     echo $id;
-//     return view('sample');
-// });
 
 Route::get('/admin_index', function () {
     return view('admin_index');
@@ -47,6 +42,7 @@ Route::view('contact','contact');
 Route::view('physics_lab','highlights/physics_lab');
 Route::view('chemistry_lab','highlights/chemistry_lab');
 Route::view('header','components/header');
+Route::view('dashboard','components/dashboard');
 
 
 // Route::view('sample','sample',['name'=>'ram and sita']);
@@ -54,7 +50,6 @@ Route::view('header','components/header');
 Route::view('userview','/user');
 //once the home page is loaded it is redirect to the mentioned route
 // Route:: redirect('/','sample');
-=======
 
 Route::view('/about', 'about');
 Route::view('/teacher', 'teacher');
@@ -91,4 +86,3 @@ Route::namespace('Auth')->group(function () {
     Route::get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.update');
 });
->>>>>>> 4586d152e281084cdef8791d66238b7ae676efb0
