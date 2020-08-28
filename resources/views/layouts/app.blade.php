@@ -17,11 +17,12 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+    <link href="css/main.css" rel="stylesheet" media="all">
     @FilemanagerScript
-</head>
 </head>
 
 <body>
@@ -76,10 +77,24 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-1">
             @yield('content')
         </main>
     </div>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>
+        window.onload = function() {
+
+            tinymce.init({
+                selector: '#editor',
+                toolbar: 'bold italic underline',
+                branding: false,
+                file_browser_callback: filemanager.tinyMceCallback
+            });
+
+        };
+    </script>
+
 </body>
 
 </html>

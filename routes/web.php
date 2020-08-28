@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,12 +25,21 @@ Route::view('/blog-single', 'blog-single');
 Route::view('/blog', 'blog');
 Route::view('/gallery', 'gallery');
 Route::view('/contact', 'contact');
+
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
 
+Route::get('pickfile','UploadFile@index');
+Route::post('uploadfile','UploadFile@store');
 Auth::routes(['register' => false]);
-Route::get('admin/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index');
 Route::get('gallery','GalleryController@index');
+
+//for admin panel and dashboard
+Route::get('/news','NewsController@create');
+Route::post('/news','NewsController@storeNews');
+
+//user login and authentication
 Route::namespace('Auth')->group(function () {
     //Login Routes
     Route::get('/login', 'LoginController@showLoginForm')->name('login');
