@@ -22,10 +22,10 @@ class CreateStaffTable extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('post');
-            $table->string('description');
-            $table->string('image_uri');            
+            $table->string('name')->nullable(false);
+            $table->string('post')->nullable(false);
+            $table->string('description')->nullable(true);
+            $table->string('image_uri')->nullable(false);            
             $table->timestamps();
         });
     }

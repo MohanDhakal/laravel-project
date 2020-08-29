@@ -17,38 +17,35 @@ class StaffController extends Controller
 
     public function create()
     {
-        return view('admin.home#addStaff');
+        return view('admin.home');
         //return the create new news page
     }
     public function addStaff(Request $request)
     {
-        $dateTime = Carbon::now();
-        $image = $request->file('image');
-        $imageName = $image->getClientOriginalName();
-        $image_path = $image->storeAs('images', $dateTime->toDateTimeString() . $imageName);
-    
+
+
+        //if validation fails, it will redirected to the same page
 
         $validatedData = $request->validate([
             'name' => 'required',
             'image_uri' => 'required'
         ]);
-        //if validation fails, it will redirected to the same page
+
+        //uploading and determining image path
+        $dateTime = Carbon::now();
+        $image = $request->file('image_uri');
+        $imageName = $image->getClientOriginalName();
+        $image_path = $image->storeAs('images', $dateTime->toDateTimeString() . $imageName);
 
 
-        //customizing error bag
-        $errors = $this->getErrorBag();
-        $errors->add('name', 'You must give a name');
-        $errors->add('image', 'please specify an image link');
-       
         //get all the staff values from form and store it in model
         $staff = new Staff();
         $staff->name = $request->input('name');
         $staff->description = $request->input('description');
         $staff->image_uri = $image_path;
 
-        $staff->post = $request->input('post');
+        $staff->post = $request->input('post', 'no post');
         $staff->save();
-        redirect('/teacher');
-        
+        return redirect('/teacher');
     }
 }

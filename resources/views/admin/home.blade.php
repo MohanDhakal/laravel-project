@@ -4,17 +4,21 @@
 <div class="container-fluid">
     <div class="row justify-content-lg-start">
 
-        <aside class="col-2 px-0" id="left">
+        <aside class="col-2 px-0 " id="left" style="position: fixed;">
 
-            <div class="list-group w-100">
-                <a href="#" class="list-group-item  active">Dashboard</a>
-                <a href="#addNews" class="list-group-item">Add News</a>
-                <a href="#addEvent" class="list-group-item">Add new Event</a>
-                <a href="#addStaff" class="list-group-item">Add new Staff</a>
+            <div class="list-group w-100" >
+                <a href="#" id="home" class="list-group-item ">Dashboard</a>
+                <a href="#addNews" id="news"  class="list-group-item">Add News</a>
+                <a href="#addEvent" id="event"  class="list-group-item">Add new Event</a>
+                <a href="#addStaff" id="staff" class="list-group-item">Add new Staff</a>
             </div>
         </aside>
+    </div>
 
-        <div class="col-10 px-3 py-2" id="addNews">
+    <div class="row justify-content-lg-end">
+
+
+        <div class="col-10 px-3 py-2 " id="addNews">
             <div class="card">
 
                 <div class="page-wrapper bg-dark p-t-100 p-b-50">
@@ -84,9 +88,6 @@
         </div>
         <!-- end col-10 add events -->
 
-        <div class="col-2">
-
-        </div>
         <!-- Area Chart -->
         <div class="col-xl-10 col-lg-5" id="addEvent">
             <div class="card shadow mb-4">
@@ -149,7 +150,6 @@
             </div>
         </div>
         <!--end of second event-->
-      <div class="col-2"></div>
         <div class="col-xl-10 col-lg-5" id="addStaff">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
@@ -160,13 +160,16 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="container">
-                        <form action="action_page.php">
+                        <form action="/newstaff" method="POST" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-25">
                                     <label for="name">Name</label>
                                 </div>
                                 <div class="col-75">
                                     <input type="text" id="name" name="name">
+                                    @error('name')
+                                    <div class=" alert alert-danger">{{ $message }} </div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -176,10 +179,10 @@
                                 </div>
                                 <div class="col-75">
                                     <select name="post" id="post">
-                                        <option value="volvo">Principal</option>
-                                        <option value="saab">Supervisor</option>
-                                        <option value="opel">Teacher</option>
-                                        <option value="audi">Librarian</option>
+                                        <option value="Principal">Principal</option>
+                                        <option value="SuperVisor">Supervisor</option>
+                                        <option value="Teacher">Teacher</option>
+                                        <option value="Librarian">Librarian</option>
                                     </select>
                                 </div>
                             </div>
@@ -188,7 +191,7 @@
                                     <label for="subject">Description</label>
                                 </div>
                                 <div class="col-75">
-                                    <textarea id="discription" maxlength="50" name="discription" placeholder="Write something.." style="height:200px"></textarea>
+                                    <textarea id="discription" maxlength="50" name="description" placeholder="Write something.." style="height:200px"></textarea>
                                 </div>
                             </div>
                             <div class="row">
@@ -196,10 +199,14 @@
                                     <label for="name">Image</label>
                                 </div>
                                 <div class="col-75">
-                                    <input type="link" id="image" name="image">
+                                    <input type="file" name="image_uri" id="image" placeholder="select an image">
+                                    @error('image_uri')
+                                    <div class=" alert alert-danger">{{ $message }} </div>
+                                    @enderror
+
                                 </div>
                             </div>
-
+                            @csrf
                             <div class="row">
                                 <input type="submit" value="Add Staff">
                             </div>
