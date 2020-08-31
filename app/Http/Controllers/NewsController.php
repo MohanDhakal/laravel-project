@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+
 use Carbon\Carbon;
 use App\News;
 use Illuminate\Http\Request;
@@ -10,7 +12,8 @@ class NewsController extends Controller
 {
     public function index()
     {
-        //return home page for news
+        $newsList = DB::table('news')->get();
+        return view('blog', ['newsList' => $newsList]);
     }
 
     public function create()
@@ -26,9 +29,6 @@ class NewsController extends Controller
             'title' => 'bail|required|max:255',
             'content' => 'required',
         ]);
-        $errors = $this->getErrorBag();
-        $errors->add('title', 'Title cannot be empyty');
-        $errors->add('title', 'Content cannot be empty');
 
         //add new news to the database
         $dateTime = Carbon::now();
@@ -36,6 +36,7 @@ class NewsController extends Controller
 
         $file = $request->file('pdf_file');
         $image = $request->file('image');
+
         if ($file != null) {
             $fileName = $file->getClientOriginalName();
             $file_path = $file->storeAs('notices', $dateTime->toDateTimeString() . $fileName);
@@ -43,7 +44,7 @@ class NewsController extends Controller
         }
         if ($image != null) {
             $imageName = $image->getClientOriginalName();
-            $image_path = $file->storeAs('images', $dateTime->toDateTimeString() . $imageName);
+            $image_path = $image->storeAs('images', $dateTime->toDateTimeString() . $imageName);
             $news->image_uri = $image_path;
         }
         $news->title = $request->input('title');
@@ -51,5 +52,9 @@ class NewsController extends Controller
 
         $news->save();
         return redirect('/blog');
+    }
+
+    public function showNewsDetail($id){
+        return view('/blog-single');
     }
 }

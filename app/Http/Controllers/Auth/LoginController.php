@@ -28,7 +28,7 @@ class LoginController extends Controller
 
 
     protected $redirectTo = "admin.home";
-
+   
     /**
      * Create a new controller instance.
      *
@@ -42,4 +42,5 @@ class LoginController extends Controller
     {
         return 'username';
     }
+ 
 }

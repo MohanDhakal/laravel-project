@@ -19,9 +19,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-Route::get('/admin_index', function () {
-    return view('admin_index');
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
 
 Route::get('/sample', function () {
@@ -83,6 +82,5 @@ Route::namespace('Auth')->group(function () {
     Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 
     //Reset Password Routes
-    Route::get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
-    Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.update');
+    Route::get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');   Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.update');
 });
