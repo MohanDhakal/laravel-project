@@ -57,7 +57,7 @@ Route::get('home', 'HomeController@index');
 
 //store routine and results
 Route::post('/resultroutine', 'ResultRoutineController@storeFile');
-Route::get('/file_download', 'ResultRoutineController@index');
+Route::get('/results', 'ResultRoutineController@index');
 Route::get('/result', 'ResultRoutineController@downloadFile');
 
 //user login and authentication

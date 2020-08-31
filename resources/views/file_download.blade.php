@@ -9,12 +9,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/animate.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/aos.css">
+
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/flaticon.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/icomoon.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <style>
         body {
-            color: #566787;
             background: #f5f5f5;
             font-family: 'Roboto', sans-serif;
         }
@@ -50,7 +66,6 @@
             border-bottom: 1px solid #e9e9e9;
             padding-bottom: 15px;
             margin-bottom: 5px;
-            background: rgb(0, 50, 74);
             margin: -20px -31px 10px;
             padding: 15px 30px;
             color: #fff;
@@ -130,20 +145,22 @@
 </head>
 
 <body>
+    <x-header status="result" />
+
     <div class="container-xl">
         <div class="table-responsive">
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Results <b>& Routines</b></h2>
+                            <h2><b> Routines</b></h2>
                         </div>
 
+                        <tr>
                     </div>
                 </div>
                 <table class="table table-striped table-hover">
                     <thead>
-                        <tr>
                             <th>#</th>
                             <th>Name</th>
                             <th>Action</th>
@@ -151,8 +168,9 @@
                     </thead>
                     <tbody>
                         @foreach($files as $file)
+                        
                         <tr data-status="active">
-                            <td>1</td>
+                            <td><?php $i=1; echo $i++ ?></td>
                             <td>{{$file}}</td>
                             <td><a href="/result" class="btn btn-sm manage">Download</a></td>
                         </tr>

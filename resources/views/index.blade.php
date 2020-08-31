@@ -57,7 +57,7 @@
     <!-- events list section start -->
 
     <section class="col-lg-12 container bg-light m-2">
-        <h1>Events</h1>
+        <h1>Recent Events</h1>
         <div class="row ">
             <article class="card fl-left">
                 <section class="date">
