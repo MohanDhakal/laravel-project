@@ -22,6 +22,9 @@
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/icomoon.css">
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/style.css">
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -548,46 +551,20 @@
 	<footer class="ftco-footer ftco-bg-dark ftco-section">
 		<div class="container">
 			<div class="row mb-5">
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-4">
 					<div class="ftco-footer-widget mb-5">
 						<h2 class="ftco-heading-2">Have a Questions?</h2>
 						<div class="block-23 mb-3">
 							<ul>
-								<li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+								<li><span class="icon icon-map-marker"></span><span class="text">Co-ordinates: 28.13°N 83.78°E, Panchamul-syangja, Gandaki Zone, Nepal</span></li>
+								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+ 063 522 611</span></a></li>
+								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@trishaheed.edu.np</span></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="ftco-footer-widget mb-5">
-						<h2 class="ftco-heading-2">Recent Blog</h2>
-						<div class="block-21 mb-4 d-flex">
-							<a class="blog-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/image_1.jpg);"></a>
-							<div class="text">
-								<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-								<div class="meta">
-									<div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
-									<div><a href="#"><span class="icon-person"></span> Admin</a></div>
-									<div><a href="#"><span class="icon-chat"></span> 19</a></div>
-								</div>
-							</div>
-						</div>
-						<div class="block-21 mb-5 d-flex">
-							<a class="blog-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/image_2.jpg);"></a>
-							<div class="text">
-								<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-								<div class="meta">
-									<div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
-									<div><a href="#"><span class="icon-person"></span> Admin</a></div>
-									<div><a href="#"><span class="icon-chat"></span> 19</a></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
+				
+				<div class="col-md-6 col-lg-4">
 					<div class="ftco-footer-widget mb-5 ml-md-4">
 						<h2 class="ftco-heading-2">Links</h2>
 						<ul class="list-unstyled">
@@ -599,18 +576,15 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-4">
 					<div class="ftco-footer-widget mb-5">
-						<h2 class="ftco-heading-2">Subscribe Us!</h2>
-						<form action="#" class="subscribe-form">
-							<div class="form-group">
-								<input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
-								<input type="submit" value="Subscribe" class="form-control submit px-3">
-							</div>
-						</form>
-					</div>
+						<h2 class="ftco-heading-2">Connect!</h2>
+					
+				</div>
+				<div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/facebook.jpg); border"></div>
+				</div>
 					<div class="ftco-footer-widget mb-5">
-						<h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
 							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>

@@ -1,17 +1,39 @@
 </!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+<head>
+	<title></title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="<?php echo url('/'); ?>/css/gallery.css">
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+ <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/animate.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/magnific-popup.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/aos.css">
+
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/ionicons.min.css">
+
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/flaticon.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/icomoon.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/style.css">
+	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
+	
+    <title>Gallery</title>
+=======
 
 <head>
     <title></title>
+>>>>>>> 7cc36087ddecc98c0c64c094d5764d54b015a70b
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/gallery.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/animate.css">
-    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/magnific-popup.css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/aos.css">
@@ -21,8 +43,11 @@
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/flaticon.css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/icomoon.css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/style.css">
+<<<<<<< HEAD
+=======
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
 
+>>>>>>> 7cc36087ddecc98c0c64c094d5764d54b015a70b
 </head>
 
 <body>
@@ -41,6 +66,10 @@
             @endforeach
         </div>
     </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7cc36087ddecc98c0c64c094d5764d54b015a70b
 
     <script src="<?php echo url('/'); ?>/js/jquery.min.js"></script>
     <script src="<?php echo url('/'); ?>/js/jquery-migrate-3.0.1.min.js"></script>

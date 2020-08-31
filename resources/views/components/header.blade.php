@@ -44,7 +44,7 @@
 				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
 				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
 				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
 				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
 				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
 		

@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::view('about', 'about');
 Route::view('gallery', 'gallery');
 Route::view('contact', 'contact');
@@ -27,8 +26,8 @@ Route::view('/test', 'test');
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
 
-Route::get('pickfile', 'UploadFile@index');
-Route::post('uploadfile', 'UploadFile@store');
+Route::get('pickfile','UploadFile@index');
+Route::post('uploadfile','UploadFile@store');
 Auth::routes(['register' => false]);
 Route::get('home', 'HomeController@index');
 Route::get('gallery', 'GalleryController@index');
@@ -72,6 +71,5 @@ Route::namespace('Auth')->group(function () {
     Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 
     //Reset Password Routes
-    Route::get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
-    Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.update');
+    Route::get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');   Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.update');
 });
