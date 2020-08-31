@@ -14,19 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
-
-
-Route::get('users', 'Users@index');
-Route::get('greet/{name}', 'Users@show');
 Route::view('about', 'about');
-Route::view('teacher', 'teacher');
-Route::view('blog-single', 'blog-single');
-Route::view('blog', 'blog');
-Route::view('blog-single', 'blog-single');
 Route::view('gallery', 'gallery');
 Route::view('contact', 'contact');
 Route::view('physics_lab', 'highlights/physics_lab');
@@ -34,12 +23,7 @@ Route::view('chemistry_lab', 'highlights/chemistry_lab');
 Route::view('header', 'components/header');
 Route::view('dashboard', 'components/dashboard');
 Route::view('userview', '/user');
-
-Route::view('/about', 'about');
-Route::view('/teacher', 'teacher');
-Route::view('/contact', 'contact');
 Route::view('/test', 'test');
-
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
 
@@ -51,21 +35,30 @@ Route::get('gallery', 'GalleryController@index');
 
 //get data from database and show it to public
 
-Route::get('/blog','NewsController@index');
-Route::get('/blog-single');
+Route::get('/blog', 'NewsController@index');
+Route::get('/blog-single/{id}', 'NewsController@showNewsDetail');
+Route::get('teacher', 'StaffController@index');
 
-
-
-
-//for admin panel and dashboard
+//store and view news admin
 Route::get('/news', 'NewsController@create');
 Route::post('/news', 'NewsController@storeNews');
+Route::get('/', 'EventController@index');
 
+//store and view staff admin
 
 Route::get('/newstaff', 'StaffController@create');
 Route::post('/newstaff', 'StaffController@addStaff');
 
+//store and view event admin
+Route::get('/event', 'EventController@create');
+Route::post('/event', 'EventController@storeEvent');
+
 Route::get('home', 'HomeController@index');
+
+//store routine and results
+Route::post('/resultroutine', 'ResultRoutineController@storeFile');
+Route::get('/file_download', 'ResultRoutineController@index');
+Route::get('/result', 'ResultRoutineController@downloadFile');
 
 //user login and authentication
 Route::namespace('Auth')->group(function () {

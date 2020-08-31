@@ -54,8 +54,119 @@
 			</div>
 		</div>
 	</section>
+    <!-- events list section start -->
 
-	<section class="ftco-services ftco-no-pb">
+    <section class="col-lg-12 container bg-light m-2">
+        <h1>Events</h1>
+        <div class="row ">
+            <article class="card fl-left">
+                <section class="date">
+                    <time datetime="23th feb">
+                        <span><?php echo explode("-",$events[0]->date)[2]?></span>
+                        <span><?php echo explode("-",$events[0]->date)[1]?></span>
+                    </time>
+                </section>
+                <section class="card-cont">
+
+                    <h3>{{$events[0]->title}}</h3>
+                    <div class="even-date">
+                        <i class="fa fa-calendar"></i>
+                        <time>
+                            <span>{{$events[0]->date}}</span>
+                            <span>{{$events[0]->time}}</span>
+                        </time>
+                    </div>
+                    <div class="even-info">
+                        <i class="fa fa-map-marker"></i>
+                        <p>
+                            {{$events[0]->description}}
+                        </p>
+                    </div>
+                </section>
+            </article>
+            <article class="card fl-left">
+                <section class="date">
+                    <time datetime="23th feb">
+                        <span><?php echo explode("-",$events[1]->date)[2]?></span>
+                        <span><?php echo explode("-",$events[1]->date)[1]?></span>
+                    </time>
+                </section>
+                <section class="card-cont">
+
+                    <h3>{{$events[1]->title}}</h3>
+                    <div class="even-date">
+                        <i class="fa fa-calendar"></i>
+                        <time>
+                            <span>{{$events[1]->date}}</span>
+                            <span>{{$events[1]->time}}</span>
+                        </time>
+                    </div>
+                    <div class="even-info">
+                        <i class="fa fa-map-marker"></i>
+                        <p>
+                            {{$events[1]->description}}
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div class="row ">
+            <article class="card fl-left">
+                <section class="date">
+                    <time datetime="23th feb">
+                        <span><?php echo explode("-",$events[2]->date)[2]?></span>
+                        <span><?php echo explode("-",$events[2]->date)[1]?></span>
+                    </time>
+                </section>
+                <section class="card-cont">
+
+                    <h3>{{$events[2]->title}}</h3>
+                    <div class="even-date">
+                        <i class="fa fa-calendar"></i>
+                        <time>
+                            <span>{{$events[2]->date}}</span>
+                            <span>{{$events[2]->time}}</span>
+                        </time>
+                    </div>
+                    <div class="even-info">
+                        <i class="fa fa-map-marker"></i>
+                        <p>
+                            {{$events[2]->description}}
+                        </p>
+                    </div>
+                </section>
+            </article>
+            <article class="card fl-left">
+                <section class="date">
+                    <time datetime="23th feb">
+                        <span><?php echo explode("-",$events[3]->date)[2]?></span>
+                        <span><?php echo explode("-",$events[3]->date)[1]?></span>
+                    </time>
+                </section>
+                <section class="card-cont">
+
+                    <h3>{{$events[3]->title}}</h3>
+                    <div class="even-date">
+                        <i class="fa fa-calendar"></i>
+                        <time>
+                            <span>{{$events[3]->date}}</span>
+                            <span>{{$events[3]->time}}</span>
+                        </time>
+                    </div>
+                    <div class="even-info">
+                        <i class="fa fa-map-marker"></i>
+                        <p>
+                            {{$events[3]->description}}
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </section>
+    <!-- event section closed -->
+
+
+    <section class="ftco-services ftco-no-pb">
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
@@ -145,7 +256,7 @@
 			<div class="row d-md-flex align-items-center justify-content-center">
 				<div class="col-lg-12">
 					<div class="row d-md-flex align-items-center">
-						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate ">
 							<div class="block-18">
 								<div class="icon"><span class="flaticon-doctor"></span></div>
 								<div class="text">
@@ -186,114 +297,8 @@
 			</div>
 		</div>
 	</section>
-	<!-- events list section start -->
 
 
-	<section class="col-lg-12 container" style="padding: 10px;background-color: #dadde6;">
-		<h1>Events</h1>
-		<div class="row">
-			<article class="card fl-left">
-				<section class="date">
-					<time datetime="23th feb">
-						<span>23</span><span>feb</span>
-					</time>
-				</section>
-				<section class="card-cont">
-
-					<h3>live in sydney</h3>
-					<div class="even-date">
-						<i class="fa fa-calendar"></i>
-						<time>
-							<span>wednesday 28 december 2014</span>
-							<span>08:55pm to 12:00 am</span>
-						</time>
-					</div>
-					<div class="even-info">
-						<i class="fa fa-map-marker"></i>
-						<p>
-							nexen square for people australia, sydney
-						</p>
-					</div>
-				</section>
-			</article>
-			<article class="card fl-left">
-				<section class="date">
-					<time datetime="23th feb">
-						<span>23</span><span>feb</span>
-					</time>
-				</section>
-				<section class="card-cont">
-
-					<h3>corner obsest program</h3>
-					<div class="even-date">
-						<i class="fa fa-calendar"></i>
-						<time>
-							<span>wednesday 28 december 2014</span>
-							<span>08:55pm to 12:00 am</span>
-						</time>
-					</div>
-					<div class="even-info">
-						<i class="fa fa-map-marker"></i>
-						<p>
-							nexen square for people australia, sydney
-						</p>
-					</div>
-				</section>
-			</article>
-		</div>
-		<div class="row">
-			<article class="card fl-left">
-				<section class="date">
-					<time datetime="23th feb">
-						<span>23</span><span>feb</span>
-					</time>
-				</section>
-				<section class="card-cont">
-
-					<h3>music kaboom festivel</h3>
-					<div class="even-date">
-						<i class="fa fa-calendar"></i>
-						<time>
-							<span>wednesday 28 december 2014</span>
-							<span>08:55pm to 12:00 am</span>
-						</time>
-					</div>
-					<div class="even-info">
-						<i class="fa fa-map-marker"></i>
-						<p>
-							nexen square for people australia, sydney
-						</p>
-					</div>
-				</section>
-			</article>
-			<article class="card fl-left">
-				<section class="date">
-					<time datetime="23th feb">
-						<span>23</span><span>feb</span>
-					</time>
-				</section>
-				<section class="card-cont">
-
-					<h3>hello dubai festivel</h3>
-					<div class="even-date">
-						<i class="fa fa-calendar"></i>
-						<time>
-							<span>wednesday 28 december 2014</span>
-							<span>08:55pm to 12:00 am</span>
-						</time>
-					</div>
-					<div class="even-info">
-						<i class="fa fa-map-marker"></i>
-						<p>
-							nexen square for people australia, sydney
-						</p>
-					</div>
-				</section>
-			</article>
-		</div>
-	</div>
-</section>
-	<!-- event section closed -->
 
 	<section class="ftco-section">
 		<style background: orange></style>
@@ -359,100 +364,10 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	</section>
-
-	<section class="ftco-section bg-light">
-		<div class="container-fluid px-4">
-			<div class="row justify-content-center mb-5 pb-2">
-				<div class="col-md-8 text-center heading-section ftco-animate">
-					<h2 class="mb-4">Certified Teachers</h2>
-					<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(<?php echo url('/'); ?>/images/teacher-1.jpg);"></div>
-						</div>
-						<div class="text pt-3 text-center">
-							<h3>Bianca Wilson</h3>
-							<span class="position mb-2">Teacher</span>
-							<div class="faded">
-								<ul class="ftco-social text-center">
-									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(<?php echo url('/'); ?>/images/teacher-2.jpg);"></div>
-						</div>
-						<div class="text pt-3 text-center">
-							<h3>Mitch Parker</h3>
-							<span class="position mb-2">English Teacher</span>
-							<div class="faded">
-								<ul class="ftco-social text-center">
-									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(<?php echo url('/'); ?>/images/teacher-3.jpg);"></div>
-						</div>
-						<div class="text pt-3 text-center">
-							<h3>Stella Smith</h3>
-							<span class="position mb-2">Art Teacher</span>
-							<div class="faded">
-								<ul class="ftco-social text-center">
-									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(<?php echo url('/'); ?>/images/teacher-4.jpg);"></div>
-						</div>
-						<div class="text pt-3 text-center">
-							<h3>Monshe Henderson</h3>
-							<span class="position mb-2">Science Teacher</span>
-							<div class="faded">
-								<ul class="ftco-social text-center">
-									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</section>
 
 
-	<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(<?php echo url('/'); ?>/images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+	{{--<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(<?php echo url('/'); ?>/images/bg_5.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row justify-content-end">
@@ -505,87 +420,9 @@
 			</div>
 		</div>
 	</section>
+--}}
 
-	<section class="ftco-section bg-light">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-2">
-				<div class="col-md-8 text-center heading-section ftco-animate">
-					<h2 class="mb-4"><span>Recent</span> Blog</h2>
-					<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-lg-4 ftco-animate">
-					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('<?php echo url('/'); ?>/images/image_1.jpg');">
-							<div class="meta-date text-center p-2">
-								<span class="day">26</span>
-								<span class="mos">June</span>
-								<span class="yr">2019</span>
-							</div>
-						</a>
-						<div class="text bg-white p-4">
-							<h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<div class="d-flex align-items-center mt-4">
-								<p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-								<p class="ml-auto mb-0">
-									<a href="#" class="mr-2">Admin</a>
-									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 ftco-animate">
-					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('<?php echo url('/'); ?>/images/image_2.jpg');">
-							<div class="meta-date text-center p-2">
-								<span class="day">26</span>
-								<span class="mos">June</span>
-								<span class="yr">2019</span>
-							</div>
-						</a>
-						<div class="text bg-white p-4">
-							<h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<div class="d-flex align-items-center mt-4">
-								<p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-								<p class="ml-auto mb-0">
-									<a href="#" class="mr-2">Admin</a>
-									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 ftco-animate">
-					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('<?php echo url('/'); ?>/images/image_3.jpg');">
-							<div class="meta-date text-center p-2">
-								<span class="day">26</span>
-								<span class="mos">June</span>
-								<span class="yr">2019</span>
-							</div>
-						</a>
-						<div class="text bg-white p-4">
-							<h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<div class="d-flex align-items-center mt-4">
-								<p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-								<p class="ml-auto mb-0">
-									<a href="#" class="mr-2">Admin</a>
-									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="ftco-section testimony-section">
+	<section class="ftco-section testimony-section bg-light">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">

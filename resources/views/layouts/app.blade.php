@@ -11,14 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="<?php echo url('/'); ?>/vendor/jquery/jquery.min.js"></script>
-
-
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,15 +21,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.css">
+    <link href="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/css/nepali.datepicker.v3.2.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="<?php echo url('/'); ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/eventForm.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.css">
-
-
     @FilemanagerScript
 </head>
 
@@ -96,6 +88,10 @@
         </main>
     </div>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script src="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/js/nepali.datepicker.v3.2.min.js" type="text/javascript"></script>
+    <script src="js/global.js"></script>
+    <script src="<?php echo url('/'); ?>/js/event.js"></script>
+
     <script type="text/javascript">
         window.onload = function() {
 
@@ -105,17 +101,16 @@
                 branding: false,
                 file_browser_callback: filemanager.tinyMceCallback
             });
+            var mainInput = document.getElementById("nepali-datepicker");
+            mainInput.nepaliDatePicker();
 
         };
+        $(function() {
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+            });
+        });
     </script>
-    <script src="<?php echo url('/'); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="<?php echo url('/'); ?>/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-
-    <script src="js/global.js"></script>
-    <script src="<?php echo url('/'); ?>/js/event.js"></script>
 
 </body>
 

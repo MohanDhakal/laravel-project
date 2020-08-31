@@ -39,12 +39,12 @@ class NewsController extends Controller
 
         if ($file != null) {
             $fileName = $file->getClientOriginalName();
-            $file_path = $file->storeAs('notices', $dateTime->toDateTimeString() . $fileName);
+            $file_path = $file->storeAs('public/notices', $dateTime->toDateTimeString() . $fileName);
             $news->file_uri = $file_path;
         }
         if ($image != null) {
             $imageName = $image->getClientOriginalName();
-            $image_path = $image->storeAs('images', $dateTime->toDateTimeString() . $imageName);
+            $image_path = $image->storeAs('public/images', $dateTime->toDateTimeString() . $imageName);
             $news->image_uri = $image_path;
         }
         $news->title = $request->input('title');
@@ -54,7 +54,12 @@ class NewsController extends Controller
         return redirect('/blog');
     }
 
-    public function showNewsDetail($id){
-        return view('/blog-single');
+    public function showNewsDetail($id)
+    {
+        $news = DB::table('news')->find($id);
+
+        return view('/blog-single', [
+            'news' => $news
+        ]);
     }
 }

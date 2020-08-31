@@ -44,7 +44,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 ftco-animate">
-          <h2 class="mb-3">#2. Creative WordPress Themes</h2>
+          <h2 class="mb-3">{{$news->title}}</h2>
           <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
           <p>
             <img src="<?php echo url('/'); ?>/images/image_2.jpg" alt="" class="img-fluid">
