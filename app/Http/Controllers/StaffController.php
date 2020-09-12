@@ -7,12 +7,18 @@ use App\Staff;
 use Carbon\Carbon;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class StaffController extends Controller
 {
     public function index()
     {
-        //return home page for news
+        $staffList = DB::table('staff')->get();
+        foreach ($staffList as $staff) {
+            $staff->image_uri = Storage::url($staff->image_uri);
+        }
+        return view('teacher', ['staffList' => $staffList]);
     }
 
     public function create()
@@ -35,7 +41,7 @@ class StaffController extends Controller
         $dateTime = Carbon::now();
         $image = $request->file('image_uri');
         $imageName = $image->getClientOriginalName();
-        $image_path = $image->storeAs('images', $dateTime->toDateTimeString() . $imageName);
+        $image_path = $image->storeAs('public/images', $dateTime->toDateTimeString() . $imageName);
 
 
         //get all the staff values from form and store it in model

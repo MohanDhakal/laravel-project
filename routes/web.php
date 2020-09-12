@@ -15,48 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/sample', function () {
-    return view('sample',[
-        'name'=>'John Doe'
-    ]);
-});
-
-Route::get('users','Users@index');
-Route::get('greet/{name}','Users@show');
-Route::post('userController','UserController@validateForm');
-Route::view('about','about');
-Route::view('teacher','teacher');
-Route::view('blog-single','blog-single');
-Route::view('blog','blog');
-Route::view('blog-single','blog-single');
-Route::view('gallery','gallery');
-Route::view('contact','contact');
-Route::view('physics_lab','highlights/physics_lab');
-Route::view('chemistry_lab','highlights/chemistry_lab');
-Route::view('header','components/header');
-
-
-// Route::view('sample','sample',['name'=>'ram and sita']);
-//alternative syntax
-Route::view('userview','/user');
-//once the home page is loaded it is redirect to the mentioned route
-// Route:: redirect('/','sample');
-
-Route::view('/about', 'about');
-Route::view('/teacher', 'teacher');
-Route::view('/blog-single', 'blog-single');
-Route::view('/blog', 'blog');
-Route::view('/gallery', 'gallery');
-Route::view('/contact', 'contact');
-
+Route::view('about', 'about');
+Route::view('gallery', 'gallery');
+Route::view('contact', 'contact');
+Route::view('physics_lab', 'highlights/physics_lab');
+Route::view('chemistry_lab', 'highlights/chemistry_lab');
+Route::view('header', 'components/header');
+Route::view('dashboard', 'components/dashboard');
+Route::view('userview', '/user');
+Route::view('/test', 'test');
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
 
@@ -64,11 +32,34 @@ Route::get('pickfile','UploadFile@index');
 Route::post('uploadfile','UploadFile@store');
 Auth::routes(['register' => false]);
 Route::get('home', 'HomeController@index');
-Route::get('gallery','GalleryController@index');
+Route::get('gallery', 'GalleryController@index');
 
-//for admin panel and dashboard
-Route::get('/news','NewsController@create');
-Route::post('/news','NewsController@storeNews');
+//get data from database and show it to public
+
+Route::get('/blog', 'NewsController@index');
+Route::get('/blog-single/{id}', 'NewsController@showNewsDetail');
+Route::get('teacher', 'StaffController@index');
+
+//store and view news admin
+Route::get('/news', 'NewsController@create');
+Route::post('/news', 'NewsController@storeNews');
+Route::view('/', '/index');
+
+//store and view staff admin
+
+Route::get('/newstaff', 'StaffController@create');
+Route::post('/newstaff', 'StaffController@addStaff');
+
+//store and view event admin
+Route::get('/event', 'EventController@create');
+Route::post('/event', 'EventController@storeEvent');
+
+Route::get('home', 'HomeController@index');
+
+//store routine and results
+Route::post('/resultroutine', 'ResultRoutineController@storeFile');
+Route::get('/file_download', 'ResultRoutineController@index');
+Route::get('/result', 'ResultRoutineController@downloadFile');
 
 //user login and authentication
 Route::namespace('Auth')->group(function () {

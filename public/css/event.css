@@ -9,19 +9,19 @@
     float: right
 }
 
-.container {
-    /* background-color: #dadde6; */
-    /* font-family: arial; */
-    /* width: 90%; */
-    /* margin: 10px auto; */
-}
+/*.container {*/
+/*    !* background-color: #dadde6; *!*/
+/*    !* font-family: arial; *!*/
+/*    !* width: 90%; *!*/
+/*    !* margin: 10px auto; *!*/
+/*}*/
 
 h1 {
     text-transform: uppercase;
     font-weight: 900;
     border-left: 10px solid #fec500;
     padding-left: 10px;
-    margin-bottom: 30px
+    margin-bottom: 20px
 }
 
 .row {
@@ -41,34 +41,17 @@ h1 {
 }
 
 .card+.card {
-    margin-left: 2%
+    margin-left: 1%
 }
 
 .date {
     display: table-cell;
-    width: 25%;
+    width: 15%;
     position: relative;
     text-align: center;
     border-right: 2px dashed #dadde6
 }
 
-.date:before, .date:after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-color: #DADDE6;
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    z-index: 1;
-    border-radius: 50%
-}
-
-.date:after {
-    top: auto;
-    bottom: -15px
-}
 
 .date time {
     display: block;
