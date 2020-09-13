@@ -27,6 +27,8 @@ Route::view('userview', '/user');
 Route::view('/test', 'test');
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
+Route::view('/others_smc', 'others_smc');
+Route::view('/others_tpc', 'others_tpc');
 
 Route::get('pickfile','UploadFile@index');
 Route::post('uploadfile','UploadFile@store');
@@ -58,7 +60,7 @@ Route::get('home', 'HomeController@index');
 
 //store routine and results
 Route::post('/resultroutine', 'ResultRoutineController@storeFile');
-Route::get('/file_download', 'ResultRoutineController@index');
+Route::get('/results', 'ResultRoutineController@index');
 Route::get('/result', 'ResultRoutineController@downloadFile');
 
 //user login and authentication

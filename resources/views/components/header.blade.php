@@ -32,63 +32,148 @@
 		</div>
 	</div>
 </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container d-flex align-items-center px-4">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="oi oi-menu"></span> Menu
+		</button>
+		<div class="collapse navbar-collapse" id="ftco-nav">
+			<ul class="navbar-nav mr-auto">
+				@if($status=='home')
+				<li class="nav-item active"><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+				<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Others</a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="<?php echo url('others_smc'); ?>"> विधालय व्यवस्थापन समिति</a></li>
+					  <li><a class="dropdown-item" href="<?php echo url('others_tpc'); ?>"> शिक्षक अभिभावक संघ</a></li>
+				    </ul>
+				</li>		
 
-<div class="container-fluid">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-		<div class="container d-flex align-items-center px-4">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav mr-auto">
-					@if($status=='home')
-					<li class="nav-item active"><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
-					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-					@elseif($status=='about')
-					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-					<li class="nav-item active"><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-					@elseif($status=='gallery')
-					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-					<li class="nav-item active"><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-			
-					@elseif($status=='staff')
-					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-					<li class="nav-item active"><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-			
-					@elseif($status=='blog')
-					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-					<li class="nav-item active"><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-			
-					@elseif($status=='contact')
-					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-					<li class="nav-item active "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-					@endif
-				</ul>
-			</div>
+				@elseif($status=='about')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item active"><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+				<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Others</a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="<?php echo url('others_smc'); ?>"> विधालय व्यवस्थापन समिति</a></li>
+					  <li><a class="dropdown-item" href="<?php echo url('others_tpc'); ?>"> शिक्षक अभिभावक संघ</a></li>
+				    </ul>
+				</li>
+		
+
+				@elseif($status=='gallery')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item active"><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+				<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Others</a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="<?php echo url('others_smc'); ?>"> विधालय व्यवस्थापन समिति</a></li>
+					  <li><a class="dropdown-item" href="<?php echo url('others_tpc'); ?>"> शिक्षक अभिभावक संघ</a></li>
+				    </ul>
+				</li>
+		
+
+				@elseif($status=='staff')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+				<li class="nav-item active"><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+				<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Others</a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="<?php echo url('others_smc'); ?>"> विधालय व्यवस्थापन समिति</a></li>
+					  <li><a class="dropdown-item" href="<?php echo url('others_tpc'); ?>"> शिक्षक अभिभावक संघ</a></li>
+				    </ul>
+				</li>
+		
+
+				@elseif($status=='blog')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item active"><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+				<li class="nav-item dropdown">
+				<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Others</a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="<?php echo url('others_smc'); ?>"> विधालय व्यवस्थापन समिति</a></li>
+					  <li><a class="dropdown-item" href="<?php echo url('others_tpc'); ?>"> शिक्षक अभिभावक संघ</a></li>
+				    </ul>
+				</li>
+		
+
+				@elseif($status=='contact')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item active "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+				<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Others</a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="<?php echo url('others_smc'); ?>"> विधालय व्यवस्थापन समिति</a></li>
+					  <li><a class="dropdown-item" href="<?php echo url('others_tpc'); ?>"> शिक्षक अभिभावक संघ</a></li>
+				    </ul>
+				</li>
+		
+				@elseif($status=='result')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item  "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item active"><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+				<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Others</a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="<?php echo url('others_smc'); ?>"> विधालय व्यवस्थापन समिति</a></li>
+					  <li><a class="dropdown-item" href="<?php echo url('others_tpc'); ?>"> शिक्षक अभिभावक संघ</a></li>
+				    </ul>
+				</li>
+
+				@elseif($status=='others')
+				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
+				<li class="nav-item  "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+				<li class="nav-item active dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Others</a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="<?php echo url('others_smc'); ?>"> विधालय व्यवस्थापन समिति</a></li>
+					  <li><a class="dropdown-item" href="<?php echo url('others_tpc'); ?>"> शिक्षक अभिभावक संघ</a></li>
+				    </ul>
+				</li>
+		
+				@endif
+			</ul>
 		</div>
 	</nav>
 </div>	
