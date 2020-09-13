@@ -24,152 +24,156 @@
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 	<!-- including the header -->
 	<x-header status="home" />
 	<section class="home-slider owl-carousel">
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/<?php echo url('/'); ?>/images/bg_1.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Education: Numerous ways to aquire!</h1>
-						<p>Some methods are teaching, training, storytelling, discussion and directed research</p>
-						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/bg_2.jpg);">
-			<div class="overlay"></div>
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/1.jpg);">
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
 						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
-						<p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits.</p>
-						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/2.jpg);">
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+					<div class="col-md-6 ftco-animate">
+						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/3.jpg);">
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+					<div class="col-md-6 ftco-animate">
+						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</section>
-    <!-- events list section start -->
+	<!-- events list section start -->
 
-    <section class="col-lg-12 container bg-light m-2">
-        <h1>Recent Events</h1>
-        <div class="row ">
-            <article class="card fl-left">
-                <section class="date">
-                    <time datetime="23th feb">
-                        <span><?php echo explode("-",$events[0]->date)[2]?></span>
-                        <span><?php echo explode("-",$events[0]->date)[1]?></span>
-                    </time>
-                </section>
-                <section class="card-cont">
+	<section class="col-lg-12 container bg-light m-2">
+		<h1>Recent Events</h1>
+		<div class="row ">
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
 
-                    <h3>{{$events[0]->title}}</h3>
-                    <div class="even-date">
-                        <i class="fa fa-calendar"></i>
-                        <time>
-                            <span>{{$events[0]->date}}</span>
-                            <span>{{$events[0]->time}}</span>
-                        </time>
-                    </div>
-                    <div class="even-info">
-                        <i class="fa fa-map-marker"></i>
-                        <p>
-                            {{$events[0]->description}}
-                        </p>
-                    </div>
-                </section>
-            </article>
-            <article class="card fl-left">
-                <section class="date">
-                    <time datetime="23th feb">
-                        <span><?php echo explode("-",$events[1]->date)[2]?></span>
-                        <span><?php echo explode("-",$events[1]->date)[1]?></span>
-                    </time>
-                </section>
-                <section class="card-cont">
+					<h3>{{$events[0]->title}}</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$events[0]->date}}</span>
+							<span>{{$events[0]->time}}</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$events[0]->description}}
+						</p>
+					</div>
+				</section>
+			</article>
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $events[1]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[1]->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
 
-                    <h3>{{$events[1]->title}}</h3>
-                    <div class="even-date">
-                        <i class="fa fa-calendar"></i>
-                        <time>
-                            <span>{{$events[1]->date}}</span>
-                            <span>{{$events[1]->time}}</span>
-                        </time>
-                    </div>
-                    <div class="even-info">
-                        <i class="fa fa-map-marker"></i>
-                        <p>
-                            {{$events[1]->description}}
-                        </p>
-                    </div>
-                </section>
-            </article>
-        </div>
-        <div class="row ">
-            <article class="card fl-left">
-                <section class="date">
-                    <time datetime="23th feb">
-                        <span><?php echo explode("-",$events[2]->date)[2]?></span>
-                        <span><?php echo explode("-",$events[2]->date)[1]?></span>
-                    </time>
-                </section>
-                <section class="card-cont">
+					<h3>{{$events[1]->title}}</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$events[1]->date}}</span>
+							<span>{{$events[1]->time}}</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$events[1]->description}}
+						</p>
+					</div>
+				</section>
+			</article>
+		</div>
+		<div class="row ">
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $events[2]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[2]->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
 
-                    <h3>{{$events[2]->title}}</h3>
-                    <div class="even-date">
-                        <i class="fa fa-calendar"></i>
-                        <time>
-                            <span>{{$events[2]->date}}</span>
-                            <span>{{$events[2]->time}}</span>
-                        </time>
-                    </div>
-                    <div class="even-info">
-                        <i class="fa fa-map-marker"></i>
-                        <p>
-                            {{$events[2]->description}}
-                        </p>
-                    </div>
-                </section>
-            </article>
-            <article class="card fl-left">
-                <section class="date">
-                    <time datetime="23th feb">
-                        <span><?php echo explode("-",$events[3]->date)[2]?></span>
-                        <span><?php echo explode("-",$events[3]->date)[1]?></span>
-                    </time>
-                </section>
-                <section class="card-cont">
+					<h3>{{$events[2]->title}}</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$events[2]->date}}</span>
+							<span>{{$events[2]->time}}</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$events[2]->description}}
+						</p>
+					</div>
+				</section>
+			</article>
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $events[3]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[3]->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
 
-                    <h3>{{$events[3]->title}}</h3>
-                    <div class="even-date">
-                        <i class="fa fa-calendar"></i>
-                        <time>
-                            <span>{{$events[3]->date}}</span>
-                            <span>{{$events[3]->time}}</span>
-                        </time>
-                    </div>
-                    <div class="even-info">
-                        <i class="fa fa-map-marker"></i>
-                        <p>
-                            {{$events[3]->description}}
-                        </p>
-                    </div>
-                </section>
-            </article>
-        </div>
-    </section>
-    <!-- event section closed -->
+					<h3>{{$events[3]->title}}</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$events[3]->date}}</span>
+							<span>{{$events[3]->time}}</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$events[3]->description}}
+						</p>
+					</div>
+				</section>
+			</article>
+		</div>
+	</section>
+	<!-- event section closed -->
 
 
-    <section class="ftco-services ftco-no-pb">
+	<section class="ftco-services ftco-no-pb">
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
@@ -553,7 +557,7 @@
 			<div class="row mb-5">
 				<div class="col-md-6 col-lg-4">
 					<div class="ftco-footer-widget mb-5">
-						<h2 class="ftco-heading-2">Have a Questions?</h2>
+						<h2 class="ftco-heading-2">Where we are?</h2>
 						<div class="block-23 mb-3">
 							<ul>
 								<li><span class="icon icon-map-marker"></span><span class="text">Co-ordinates: 28.13°N 83.78°E, Panchamul-syangja, Gandaki Zone, Nepal</span></li>
@@ -563,7 +567,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-md-6 col-lg-4">
 					<div class="ftco-footer-widget mb-5 ml-md-4">
 						<h2 class="ftco-heading-2">Links</h2>
@@ -579,11 +583,11 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="ftco-footer-widget mb-5">
 						<h2 class="ftco-heading-2">Connect!</h2>
-					
-				</div>
-				<div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/facebook.jpg); border"></div>
-				</div>
+
+					</div>
+					<div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+						<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/facebook.jpg); border"></div>
+					</div>
 					<div class="ftco-footer-widget mb-5">
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
 							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -596,12 +600,7 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 
-					<p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>
-							document.write(new Date().getFullYear());
-						</script> All rights reserved <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Mohan & Kushal</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					<p>Developed with love <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Mohan & Kushal</a>
 					</p>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 <div class="bg-top navbar-light">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row no-gutters d-flex align-items-center align-items-stretch">
 			<div class="col-md-4 d-flex align-items-center py-4">
 				<a class="navbar-brand" href="<?php echo url('/'); ?>">Tri Shaheed. <span>Model School</span></a>
@@ -31,84 +31,101 @@
 			</div>
 		</div>
 	</div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	<div class="container d-flex align-items-center px-4">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="oi oi-menu"></span> Menu
-		</button>
-		<div class="collapse navbar-collapse" id="ftco-nav">
-			<ul class="navbar-nav mr-auto">
-				@if($status=='home')
-				<li class="nav-item active"><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
-				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
-		
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" style="width:100%;white-space: nowrap;" id="ftco-navbar">
+		<div class="container-fluid d-flex align-items-center" >
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav mr-0">
+					@if($status=='home')
+					<li class="nav-item active"><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
+					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+					<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+					<li class="nav-item "><a href="<?php echo url('routines'); ?>" class="nav-link">Routines</a></li>
 
-				@elseif($status=='about')
-				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item active"><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
-		
 
-				@elseif($status=='gallery')
-				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-				<li class="nav-item active"><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
-		
+					@elseif($status=='about')
+					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item active"><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
+					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+					<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+					<li class="nav-item "><a href="<?php echo url('routines'); ?>" class="nav-link">Routines</a></li>
 
-				@elseif($status=='staff')
-				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-				<li class="nav-item active"><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
-		
 
-				@elseif($status=='blog')
-				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item active"><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-				<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
-		
+					@elseif($status=='gallery')
+					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+					<li class="nav-item active"><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
+					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+					<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+					<li class="nav-item "><a href="<?php echo url('routines'); ?>" class="nav-link">Routines</a></li>
 
-				@elseif($status=='contact')
-				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-				<li class="nav-item active "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-				<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
-		
-				@elseif($status=='result')
-				<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
-				<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
-				<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
-				<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
-				<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
-				<li class="nav-item  "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
-				<li class="nav-item active"><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
-		
-				@endif
-			</ul>
+
+					@elseif($status=='staff')
+					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+					<li class="nav-item active"><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
+					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+					<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+					<li class="nav-item "><a href="<?php echo url('routines'); ?>" class="nav-link">Routines</a></li>
+
+
+					@elseif($status=='blog')
+					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+					<li class="nav-item active"><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
+					<li class="nav-item "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+					<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+					<li class="nav-item "><a href="<?php echo url('routines'); ?>" class="nav-link">Routines</a></li>
+
+
+					@elseif($status=='contact')
+					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
+					<li class="nav-item active "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+					<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+					<li class="nav-item "><a href="<?php echo url('routines'); ?>" class="nav-link">Routines</a></li>
+
+					@elseif($status=='Results')
+					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
+					<li class="nav-item  "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+					<li class="nav-item active"><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+					<li class="nav-item "><a href="<?php echo url('routines'); ?>" class="nav-link">Routines</a></li>
+
+					@elseif($status=='Routines')
+					<li class="nav-item "><a href="<?php echo url('/'); ?>" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item "><a href="<?php echo url('about'); ?>" class="nav-link">About</a></li>
+					<li class="nav-item "><a href="<?php echo url('gallery'); ?>" class="nav-link">gallery</a></li>
+					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
+					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">News & Notice</a></li>
+					<li class="nav-item  "><a href="<?php echo url('contact'); ?>" class="nav-link">Contact</a></li>
+					<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>
+					<li class="nav-item active "><a href="<?php echo url('routines'); ?>" class="nav-link">Routines</a></li>
+
+					@endif
+				</ul>
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>
+</div>

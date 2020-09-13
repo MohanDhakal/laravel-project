@@ -62,4 +62,28 @@ class NewsController extends Controller
             'news' => $news
         ]);
     }
+    public function  getNewsInLimit($startLimit = 1, $endLimit = 5)
+    {
+        $newsList = DB::select('SELECT * FROM news
+        WHERE id BETWEEN :start AND :end', ['start' => $startLimit, 'end' => $endLimit]);
+        return $newsList;
+    }
+
+    public function deleteNewsWithId($id)
+    {
+        $deleted = DB::delete('DELETE from news where id = ?', [$id]);
+        return redirect('/home');
+    }
+    public function updateNews($id, $title, $description)
+    {
+
+        $affected = DB::table('news')
+            ->where('id', $id)
+            ->update([
+                'title' => $title,
+                'content' => $description
+            ]);
+
+        return redirect('/home#addNews');
+    }
 }

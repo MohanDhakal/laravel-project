@@ -14,23 +14,17 @@ class StaffController extends Controller
 {
     public function index()
     {
-        $staffList = DB::table('staff')->get();
-        foreach ($staffList as $staff) {
-            $staff->image_uri = Storage::url($staff->image_uri);
-        }
-        return view('teacher', ['staffList' => $staffList]);
+        return view('teacher');
     }
 
     public function create()
     {
         return view('admin.home');
-        //return the create new news page
     }
     public function addStaff(Request $request)
     {
 
-
-        //if validation fails, it will redirected to the same page
+        //if validation fails, it will be redirected to the same page
 
         $validatedData = $request->validate([
             'name' => 'required',
@@ -47,11 +41,60 @@ class StaffController extends Controller
         //get all the staff values from form and store it in model
         $staff = new Staff();
         $staff->name = $request->input('name');
+        $staff->address = $request->input('address');
         $staff->description = $request->input('description');
+        $staff->phone = $request->input('phone');
+
         $staff->image_uri = $image_path;
 
-        $staff->post = $request->input('post', 'no post');
+        $staff->post = $request->input('post', 'Staff');
+        $staff->subject = $request->input('subject_of_study');
+        $staff->level = $request->input('level');
+
+
         $staff->save();
         return redirect('/teacher');
+    }
+
+    public function getStaffInLimit($startLimit = 1, $endLimit = 5)
+    {
+        $staffList = DB::select('SELECT * FROM staff
+        WHERE id BETWEEN :start AND :end', ['start' => $startLimit, 'end' => $endLimit]);
+        return $staffList;
+    }
+    public function deleteStaffWithId($id)
+    {
+        $deleted = DB::delete('DELETE from staff where id = ?', [$id]);
+        return redirect('/home');
+    }
+    public function updateStaff($id, $name, $description, $post)
+    {
+
+        $affected = DB::table('staff')
+            ->where('id', $id)
+            ->update([
+                'name' => $name,
+                'description' => $description,
+                'post' => $post
+            ]);
+
+        return redirect('/home#addStaff');
+    }
+    public function getStaffsWithTag($tag)
+    {
+        if ($tag = 'all') {
+            $staffList = DB::table('staff')->get();
+            foreach ($staffList as $staff) {
+                $staff->image_uri = Storage::url($staff->image_uri);
+            }
+
+            return response()->json($staffList, 200);
+        } else {
+            $staffList = DB::table('staff')->where('level', $tag);
+            foreach ($staffList as $staff) {
+                $staff->image_uri = Storage::url($staff->image_uri);
+            }
+            return response()->json($staffList, 200);
+        }
     }
 }

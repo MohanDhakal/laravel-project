@@ -145,7 +145,7 @@
 </head>
 
 <body>
-    <x-header status="result" />
+    <x-header status="{{$tag}}" />
 
     <div class="container-xl">
         <div class="table-responsive">
@@ -153,14 +153,13 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2><b> Routines</b></h2>
+                            <h2><b> {{$tag}}</b></h2>
                         </div>
-
-                        <tr>
                     </div>
                 </div>
                 <table class="table table-striped table-hover">
                     <thead>
+                        <tr>
                             <th>#</th>
                             <th>Name</th>
                             <th>Action</th>
@@ -168,11 +167,17 @@
                     </thead>
                     <tbody>
                         @foreach($files as $file)
-                        
+
                         <tr data-status="active">
-                            <td><?php $i=1; echo $i++ ?></td>
+                            <td>
+                                <?php
+                                $i = 0;
+                                echo ++$i;
+                                ?>
+                            </td>
                             <td>{{$file}}</td>
-                            <td><a href="/result" class="btn btn-sm manage">Download</a></td>
+
+                            <td><a href="download/resultroutine/<?php echo --$i?>/{{$tag}}" class="btn btn-sm manage">Download</a></td>
                         </tr>
                         @endforeach
                     </tbody>

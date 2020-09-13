@@ -8,15 +8,35 @@ class GalleryController extends Controller
 {
     public function index()
     {
+
+        return view('gallery');
+    }
+
+    public function getImagesWithTag($tag = 'all')
+    {
+
         $files = DB::table('filemanager')->get();
         $images = [];
 
         foreach ($files as $file) {
+            // strpos($mystring, $word) !== false;
+
             $extension = $file->ext;
             if ($extension == 'gif' || $extension == 'png' || $extension == 'jpeg' || $extension == 'jpg') {
-                array_push($images,$file);
+
+                switch ($tag) {
+                    case 'anniversary':
+                        if (strpos($file->name, $tag) !== false) {
+                            array_push($images, $file);
+                        }
+                        break;
+                    default:
+                        array_push($images, $file);
+                        break;
+                }
             }
         }
-        return view('gallery', ['images' => $images]);
+
+        return response()->json($images, 200);
     }
 }

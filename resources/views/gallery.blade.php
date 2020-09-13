@@ -1,34 +1,28 @@
 </!DOCTYPE html>
 <html>
-<<<<<<< HEAD
+
 <head>
-	<title></title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link rel="stylesheet" href="<?php echo url('/'); ?>/css/gallery.css">
- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
- <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/open-iconic-bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/animate.css">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/gallery.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/animate.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/magnific-popup.css">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/aos.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/aos.css">
 
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/ionicons.min.css">
 
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/flaticon.css">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/icomoon.css">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/style.css">
-	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
-	
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/flaticon.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/icomoon.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
+
     <title>Gallery</title>
-=======
-
-<head>
-    <title></title>
->>>>>>> 7cc36087ddecc98c0c64c094d5764d54b015a70b
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/gallery.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -43,33 +37,32 @@
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/flaticon.css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/icomoon.css">
     <link rel="stylesheet" href="<?php echo url('/'); ?>/css/style.css">
-<<<<<<< HEAD
-=======
-    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
+    <link rel="stylesheet" href="<?php echo url('/'); ?>/css/filter.css">
 
->>>>>>> 7cc36087ddecc98c0c64c094d5764d54b015a70b
 </head>
 
-<body>
+<body onload="javascript:getMessage('all')">
 
     <x-header status="gallery" />
     <!-- Page Content -->
-    <div class=" container page-top ">
-
+    <!-- <button onclick="getMessage('anniversary')" value="getImage" id="getImage">Anniversary</button> -->
+    <div class="container">
         <div class="row">
-            @foreach($images as $image)
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="{{$image->absolute_url}}" class="fancybox" rel="ligthbox">
-                    <img src="{{$image->absolute_url}}" class="zoom img-fluid " alt="">
-                </a>
+            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h2 class="gallery-title">Gallery</h2>
             </div>
-            @endforeach
+            <div>
+                <button onclick="getMessage('all')" id="getImage" class="btn btn-default filter-button" data-filter="all">all</button>
+                <button onclick="getMessage('anniversary')" class="btn btn-default filter-button" data-filter="Anniversary">Anniversary</button>
+                <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
+                <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
+                <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+            </div>
+        </div>
+        <div class="row" id="parent">
+            <!-- content here comes from ajax through javascript code -->
         </div>
     </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cc36087ddecc98c0c64c094d5764d54b015a70b
 
     <script src="<?php echo url('/'); ?>/js/jquery.min.js"></script>
     <script src="<?php echo url('/'); ?>/js/jquery-migrate-3.0.1.min.js"></script>
@@ -89,6 +82,50 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="<?php echo url('/'); ?>/js/gallery.js"></script>
+
+    <script>
+        function getMessage(tag) {
+
+
+
+            $.ajax({
+                type: 'GET',
+                url: '/getImages/' + tag,
+                data: '_token = <?php echo csrf_token() ?>',
+                success: function(imageList) {
+                    $('#parent').empty();
+                    imageList.forEach(myImage => {
+
+                        //create a sub-parent div
+                        var mydiv = document.createElement('div');
+                        mydiv.id = "newImage".concat(myImage.id);
+                        mydiv.className = "col-lg-3 col-md-4 col-xs-6 thumb";
+
+                        //creating anchor tag
+                        var myAnchor = document.createElement('a');
+                        myAnchor.href = myImage.absolute_url;
+                        myAnchor.className = 'fancybox';
+                        myAnchor.rel = 'lightbox';
+
+                        //creating img tag
+                        var imageElement = document.createElement('img');
+                        imageElement.id = 'imageId'.concat(myImage.id);
+                        imageElement.src = myImage.absolute_url;
+                        imageElement.className = "zoom img-fluid ";
+
+                        //getting parent row and appending child 
+
+                        var parent = document.getElementById('parent');
+                        parent.appendChild(mydiv).appendChild(myAnchor).appendChild(imageElement);
+
+                    });
+
+                }
+            });
+
+        }
+    </script>
+
 </body>
 
 </html>
