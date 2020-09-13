@@ -37,6 +37,8 @@
             @endforeach
         </div>
     </div>
+        <!-- including the footer -->
+    <x-footer status="home" />
 
     <script src="<?php echo url('/'); ?>/js/jquery.min.js"></script>
     <script src="<?php echo url('/'); ?>/js/jquery-migrate-3.0.1.min.js"></script>
