@@ -31,27 +31,23 @@
 	<!-- including the header -->
 	<x-header status="home" />
 	<section class="home-slider owl-carousel">
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/<?php echo url('/'); ?>/images/bg_1.jpg);">
-			<div class="overlay"></div>
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_1.jpg);">
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
 						<h1 class="mb-4">Education: Numerous ways to aquire!</h1>
-						<p>Some methods are teaching, training, storytelling, discussion and directed research</p>
-						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/bg_2.jpg);">
-			<div class="overlay"></div>
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_2.jpg);">
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
 						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
-						<p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits.</p>
-						<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+						
 					</div>
 				</div>
 			</div>
@@ -410,28 +406,28 @@
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/image_1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/course-1.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_1.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/image_2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/image_2.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_2.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/image_3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/image_3.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_3.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/image_4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/image_4.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_4.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
