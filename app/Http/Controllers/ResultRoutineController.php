@@ -38,6 +38,7 @@ class ResultRoutineController extends Controller
         }
         return redirect(url()->previous() . '#resultroutine');
     }
+    
     /**
      * download the specified file.
      * @param  string  $file

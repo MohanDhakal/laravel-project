@@ -42,10 +42,9 @@ class EventController extends Controller
         return redirect('/');
     }
 
-    public function  getEventInLimit($startLimit = 1, $endLimit = 5)
+    public function  getEvents()
     {
-        $eventList = DB::select('SELECT * FROM events
-        WHERE id BETWEEN :start AND :end', ['start' => $startLimit, 'end' => $endLimit]);
+        $eventList = DB::table('events')->get();
         return $eventList;
     }
     public function deleteEventWithId($id)
@@ -53,17 +52,25 @@ class EventController extends Controller
         $deleted = DB::delete('DELETE from events where id = ?', [$id]);
         return redirect('/home');
     }
-    public function updateEvent($id, $title, $description, $venue)
+    public function updateEvent(Request $request)
     {
 
-        $affected = DB::table('staff')
-            ->where('id', $id)
+        $title = $request->input('editEventTitle');
+        $description = $request->input('editEventDescription');
+        $venue = $request->input('editVenue');
+        $date = $request->input('editDate');
+        $time = $request->input('editHour') . ':' . $request->input('editMinute') . ' ' . $request->input('editShift');
+
+        $affected = DB::table('events')
+            ->where('id', $request->input('eventId'))
             ->update([
                 'title' => $title,
                 'description' => $description,
-                'venue' => $venue
+                'venue' => $venue,
+                'date' => $date,
+                'time' => $time
             ]);
 
-        return redirect('/home#addEvent');
+        return redirect('/home#viewEvents');
     }
 }

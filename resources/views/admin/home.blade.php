@@ -8,6 +8,10 @@
 
             <div class="list-group w-100">
                 <a href="#" id="home" class="list-group-item ">Dashboard</a>
+                <a href="#viewNews" id="home" class="list-group-item ">View News</a>
+                <a href="#viewEvents" id="home" class="list-group-item ">View Events</a>
+                <a href="#viewStaffs" id="home" class="list-group-item ">View Staff</a>
+
                 <a href="#addNews" id="news" class="list-group-item">Add News</a>
                 <a href="#addEvent" id="event" class="list-group-item">Add new Event</a>
                 <a href="#addStaff" id="staff" class="list-group-item">Add new Staff</a>
@@ -21,7 +25,7 @@
     <div class="row justify-content-lg-end">
 
         <div class="col-10 px-3 py-2 " id="dashboard">
-            <div class="card">
+            <div class="card" id="viewStaffs">
                 <div class="table-responsive">
                     <div class="table-wrapper">
                         <div class="table-title">
@@ -64,6 +68,82 @@
                                     </div>
                                 </div>
 
+                                <!-- edit staff section starts  -->
+                                <div id="editStaffModal{{$staff->id}}" class="modal fade">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <form method="post" action="/staff/update" id="editStaffForm{{$staff->id}}">
+                                                @csrf
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Edit Staff</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label for="editStaffName">Name</label>
+                                                        <input type="text" name="editStaffName" class="form-control" value="{{$staff->name}}" required>
+                                                        <input name="staffId" value="{{$staff->id}}" type="hidden">
+
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editStaffPhone">Phone Number</label>
+                                                        <input class="form-control" value="{{$staff->phone}}" type="number" name="editStaffPhone">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editStaffSubject">Post</label>
+                                                        <select name="editStaffSubject">
+                                                            <option value="Head Teacher">Head Teacher</option>
+                                                            <option value="Teacher">Teacher</option>
+                                                            <option value="Lab Assistant">Lab Assistant</option>
+                                                            <option value="Insructor">Instructor</option>
+                                                            <option value="Sub Instructor">Sub Instructor</option>
+                                                            <option value="Librarian">Librarian</option>
+                                                            <option value="Nursery Teacher">Nursery Teacher</option>
+                                                            <option value="Accountant">Accountant</option>
+                                                            <option value="School Helper">School Helper</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editStaffLevel">Level</label>
+                                                        <select name="editStaffLevel" >
+                                                            <option value="hst1">मा.वि.दिृतिय</option>
+                                                            <option value="hst2">मा.वि.तृतिय</option>
+                                                            <option value="st1">नि.मा.वि.दृितिय</option>
+                                                            <option value="st2">नि.मा.वि.तृतिय</option>
+                                                            <option value="pr1">प्रा.वि.दृितिय</option>
+                                                            <option value="pr2">प्रा.वि.तृतिय</option>
+                                                            <option value="pr">प्रा.वि</option>
+                                                            <option value="other">Others</option>
+                                                            <option value="helper">School Helper</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="edit_subject_of_study">Subject</label>
+                                                        <select name="edit_subject_of_study">
+                                                            <option value="none">None</option>
+                                                            <option value="Mathematics">Mathematics</option>
+                                                            <option value="English">English</option>
+                                                            <option value="Social">Social</option>
+                                                            <option value="Science">Science</option>
+                                                            <option value="Account">Account</option>
+                                                            <option value="HPE">HPE</option>
+                                                            <option value="Economics">Economics</option>
+                                                            <option value="Computer">Computer</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editStaffDescription">Description</label>
+                                                        <textarea name="editStaffDescription" class="form-control editor">{{$staff->description}}</textarea>
+                                                    </div>
+                                                </div>
+                                                <input type="submit" onclick="event.preventDefault();document.getElementById('editStaffForm{{$staff->id}}').submit();" value="Save">
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--edit staff section ends  -->
                                 <tr>
                                     <td>{{$staff->name}}</td>
                                     <td>{{$staff->description}}</td>
@@ -76,18 +156,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="clearfix">
-                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                            <ul class="pagination">
-                                <li class="page-item disabled"><a href="#">Previous</a></li>
-                                <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                                <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -102,7 +170,7 @@
     <div class="row justify-content-lg-end">
 
         <div class="col-10 px-3 py-2 " id="dashboard">
-            <div class="card">
+            <div class="card" id="viewEvents">
                 <div class="table-responsive">
                     <div class="table-wrapper">
                         <div class="table-title">
@@ -144,6 +212,86 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- edit event section starts  -->
+                                <div id="editEventModal{{$event->id}}" class="modal fade">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <form action="/event/update" id="editEventForm{{$event->id}}" method="POST">
+                                                @csrf
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Edit Event</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label for="editEventTitle">Title</label>
+                                                        <input type="text" name="editEventTitle" id="editEventTitle" class="form-control" value="{{$event->title}}">
+                                                        <input name="eventId" value="{{$event->id}}" type="hidden">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editEventDescription">Description</label>
+                                                        <textarea name="editEventDescription" class="form-control editor">{{$event->description}}</textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editDate">Event Date</label>
+                                                        <input type="text" value="{{$event->date}}" id="editDateTime" name="editDateTime" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editVenue">Venue</label>
+                                                        <input type="text" value="{{$event->venue}}" id="editVenue" name="editVenue" placeholder="">
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="ediTime">Time(hours/min)</label>
+                                                        <select name="editHour">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                        </select>
+                                                        <select name="editMinute">
+                                                            <option value="05">5</option>
+                                                            <option value="10">10</option>
+                                                            <option value="15">15</option>
+                                                            <option value="20">20</option>
+                                                            <option value="25">25</option>
+                                                            <option value="30">30</option>
+                                                            <option value="35">35</option>
+                                                            <option value="40">40</option>
+                                                            <option value="45">45</option>
+                                                            <option value="50">50</option>
+                                                            <option value="55">55</option>
+                                                            <option value="60">60</option>
+                                                        </select>
+                                                        <select name="editShift">
+                                                            <option value="AM">AM</option>
+                                                            <option value="PM">PM</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <input type="submit" onclick="submitEditEventForm('editEventForm{{$event->id}}')" class="btn btn-info" value="Save">
+                                                    </div>
+                                                    <script>
+                                                        function submitEditEventForm(id) {
+                                                            document.getElementById(id).submit();
+                                                        }
+                                                    </script>
+
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--edit staff section ends  -->
                                 <tr>
                                     <td>{{$event->title}}</td>
                                     <td>{{$event->description}}</td>
@@ -156,18 +304,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="clearfix">
-                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                            <ul class="pagination">
-                                <li class="page-item disabled"><a href="#">Previous</a></li>
-                                <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                                <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -180,7 +317,7 @@
     <div class="row justify-content-lg-end">
 
         <div class="col-10 px-3 py-2 " id="dashboard">
-            <div class="card">
+            <div class="card" id="viewNews">
                 <div class="table-responsive">
                     <div class="table-wrapper">
                         <div class="table-title">
@@ -200,34 +337,6 @@
                             </thead>
                             <tbody>
                                 @foreach($newsList as $news)
-                                <!--edit news section starts  -->
-                                <div id="editNewsModal{{$news->id}}" class="modal fade">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <form>
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Edit News</h4>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <label>Title</label>
-                                                        <input type="text" class="form-control" value="{{$news->title}}" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Description</label>
-                                                        <textarea class="form-control"><?php echo $news->content ?></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                                    <input type="submit" class="btn btn-info" value="Save">
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--edit news section ends  -->
 
                                 <!-- Delete Modal HTML -->
                                 <div id="deleteNewsModal{{$news->id}}" class="modal fade">
@@ -257,25 +366,13 @@
                                     <td>{{$news->title}}</td>
                                     <td><?php echo $news->content ?></td>
                                     <td>
-                                        <a href="#editNewsModal{{$news->id}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                        <!-- <a href="#editNewsModal{{$news->id}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> -->
                                         <a href="#deleteNewsModal{{$news->id}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="clearfix">
-                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                            <ul class="pagination">
-                                <li class="page-item disabled"><a href="#">Previous</a></li>
-                                <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                                <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -391,6 +488,7 @@
 
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-25">
                                     <label for="datetime">Event Date</label>
@@ -408,6 +506,8 @@
                                     </div>
                                 </div>
                             </div>
+
+
                             <div class="row">
                                 <div class="col-25">
                                     <label for="title">Time(hours/min)</label>
@@ -454,7 +554,7 @@
 
                             <div class="row">
                                 <div class="col-25">
-                                    <label for="title">Venue</label>
+                                    <label for="venue">Venue</label>
                                 </div>
                                 <div class="col-75">
                                     <input type="text" id="venue" name="venue" placeholder="">
@@ -502,7 +602,7 @@
                                     <label for="phone">Phone Number</label>
                                 </div>
                                 <div class="col-75">
-                                    <input style="width:200px;height:50px;padding-left:10px" type="number" id="phone" name="phone"  placeholder="9864567990">
+                                    <input style="width:200px;height:50px;padding-left:10px" type="number" id="phone" name="phone" placeholder="9864567990">
                                 </div>
                             </div>
 
@@ -512,10 +612,15 @@
                                 </div>
                                 <div class="col-75">
                                     <select name="post" id="post">
-                                        <option value="Principal">Principal</option>
-                                        <option value="SuperVisor">Supervisor</option>
+                                        <option value="Head Teacher">Head Teacher</option>
                                         <option value="Teacher">Teacher</option>
+                                        <option value="Lab Assistant">Lab Assistant</option>
+                                        <option value="Insructor">Instructor</option>
+                                        <option value="Sub Instructor">Sub Instructor</option>
                                         <option value="Librarian">Librarian</option>
+                                        <option value="Nursery Teacher">Nursery Teacher</option>
+                                        <option value="Accountant">Accountant</option>
+                                        <option value="School Helper">School Helper</option>
                                     </select>
                                 </div>
                             </div>
@@ -525,24 +630,34 @@
                                 </div>
                                 <div class="col-75">
                                     <select name="subject_of_study" id="subject_of_study">
-                                        <option value="Math">Math</option>
+                                        <option value="none">None</option>
+                                        <option value="Mathematics">Mathematics</option>
                                         <option value="English">English</option>
                                         <option value="Social">Social</option>
-                                        <option value="Engineering">Engineering</option>
+                                        <option value="Science">Science</option>
+                                        <option value="Account">Account</option>
+                                        <option value="HPE">HPE</option>
+                                        <option value="Economics">Economics</option>
+                                        <option value="Computer">Computer</option>
                                     </select>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-25">
                                     <label for="level">Level</label>
                                 </div>
                                 <div class="col-75">
                                     <select name="level" id="level">
-                                        <option value="higher">Higher Secondary</option>
-                                        <option value="secondary">Secondary</option>
-                                        <option value="primary">Primary</option>
-                                        <option value="nursery">Nursery</option>
-                                        <option value="helper">Helper</option>
+                                        <option value="hst1">मा.वि.दिृतिय</option>
+                                        <option value="hst2">मा.वि.तृतिय</option>
+                                        <option value="st1">नि.मा.वि.दृितिय</option>
+                                        <option value="st2">नि.मा.वि.तृतिय</option>
+                                        <option value="pr1">प्रा.वि.दृितिय</option>
+                                        <option value="pr2">प्रा.वि.तृतिय</option>
+                                        <option value="pr">प्रा.वि</option>
+                                        <option value="other">Others</option>
+                                        <option value="helper">School Helper</option>
                                     </select>
                                 </div>
                             </div>

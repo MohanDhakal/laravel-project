@@ -175,7 +175,7 @@
                                 echo ++$i;
                                 ?>
                             </td>
-                            <td>{{$file}}</td>
+                            <td>{{str_replace('public/','',$file)}}</td>
 
                             <td><a href="download/resultroutine/<?php echo --$i?>/{{$tag}}" class="btn btn-sm manage">Download</a></td>
                         </tr>

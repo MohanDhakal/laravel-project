@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -41,14 +43,21 @@ Route::get('/home/delete/news/{id}', 'NewsController@deleteNewsWithId');
 Route::get('/home/delete/staff/{id}', 'StaffController@deleteStaffWithId');
 Route::get('/home/delete/event/{id}', 'EventController@deleteEventWithId');
 
-//updating into the database
+//content editing routes for admin
+
+Route::post('/event/update', 'EventController@updateEvent');
+Route::post('/staff/update', 'StaffController@updateStaff');
+
 
 //ajax response
+
 //--------for images---------
-Route::get('/getImages/{tag}', 'GalleryController@getImagesWithTag');
+Route::get('/getImages/', 'GalleryController@getImagesWithTag');
 
 //-------for staffs---------
-Route::get('/getStaffs/{tag}', 'StaffController@getStaffsWithTag');
+Route::get('/getStaffs/', 'StaffController@getStaffsWithTag');
+
+
 
 
 
