@@ -25,6 +25,8 @@ Route::view('userview', '/user');
 Route::view('/test', 'test');
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
+Route::view('/computer_lab', 'highlights/computer_lab');
+Route::view('/electronics_lab', 'highlights/electornics_lab');
 Route::view('/others_smc', 'others_smc');
 Route::view('/others_tpc', 'others_tpc');
 Route::view('/apply', 'apply');

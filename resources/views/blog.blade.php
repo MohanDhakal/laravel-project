@@ -36,11 +36,6 @@
         <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
             <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('<?php echo url('/'); ?>/images/image_2.jpg');">
-              <div class="meta-date text-center p-2">
-                <span class="day">26</span>
-                <span class="mos">June</span>
-                <span class="yr">2019</span>
-              </div>
             </a>
             <div class="text bg-white p-4">
               <h3 class="heading"><a href="#">{{$news->title}}</a></h3>

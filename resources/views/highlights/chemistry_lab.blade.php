@@ -1,4 +1,4 @@
 <x-detail 
-imageUri="images/image_2.jpg" 
+imageUri="images/chemistry_lab.jpg" 
 title="Chemistry Lab title"
-content="Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!" />
+content="Chemical characterization entails both sample preparation and analysis. Traditional wet chemistry techniques are used to modify paving and concrete materials and to prepare and condition samples for further testing and analysis. The chemical results are often tied to physical test results from the Binder, Bituminous Mixtures, or Concrete Laboratories, to compile a chemico-physico perspective and evaluate its effect on performance. The Chemistry Laboratory complex includes a traditional chemistry laboratory for wet chemistry and sample preparation, and two laboratories dedicated to instrumentation." />

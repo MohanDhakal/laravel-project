@@ -314,7 +314,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-1.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/computer_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -322,12 +322,12 @@
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
 						</p> -->
 						<h3><a href="#">Computer Lab</a></h3>
-						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+						<p>A computer lab is a space which provides computer services to a defined community. Computer labs are typically provided by libraries to the public, or to people affiliated with that institution.</p>
 						<p><a href="computer_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-2.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/physics_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -335,12 +335,12 @@
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
 						</p> -->
 						<h3><a href="#">Physics Lab</a></h3>
-						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+						<p>In physics class, lab is central. Integral. Sacred. More than a mere place in the back of the classroom, the laboratory is the place where physics students do physics.</p>
 						<p><a href="physics_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-3.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/chemistry_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -348,12 +348,12 @@
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
 						</p> -->
 						<h3><a href="#">Chemistry Lab</a></h3>
-						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+						<p>The Chemistry Laboratory conducts fundamental studies of highway materials to understand both failure mechanisms and the superior performance.</p>
 						<p><a href="chemistry_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-4.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/electronics_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -361,7 +361,7 @@
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
 						</p> -->
 						<h3><a href="#">Electronics Lab</a></h3>
-						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+						<p>Electronics Laboratory is well equipped with sophisticated equipment’s to perform experiments on Diode and transistor based electronic circuit designs.</p>
 						<p><a href="electronics_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
