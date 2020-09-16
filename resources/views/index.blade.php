@@ -30,40 +30,29 @@
 <body>
 	<!-- including the header -->
 	<x-header status="home" />
-	<section class="home-slider owl-carousel">
+	 <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_1.jpg);">
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate">
+            <h1 class="mb-4">Education Needs Complete Solution</h1>
+          </div>
+        </div>
+        </div>
+      </div>
 
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/1.jpg);">
-			<div class="container">
-				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/2.jpg);">
-			<div class="container">
-				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/3.jpg);">
-			<div class="container">
-				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</section>
+      <div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_2.jpg);">
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate">
+            <h1 class="mb-4">University, College School Education</h1>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
 	<!-- events list section start -->
-
-	<section class="col-lg-12 container bg-light m-2">
+		<section class="col-lg-12 container bg-light m-2">
 		<h1>Recent Events</h1>
 		<div class="row ">
 			<article class="card fl-left">
@@ -94,24 +83,24 @@
 			<article class="card fl-left">
 				<section class="date">
 					<time datetime="23th feb">
-						<span><?php echo explode("-", $events[1]->date)[2] ?></span>
-						<span><?php echo explode("-", $events[1]->date)[1] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
 					</time>
 				</section>
 				<section class="card-cont">
 
-					<h3>{{$events[1]->title}}</h3>
+					<h3>{{$events[0]->title}}</h3>
 					<div class="even-date">
 						<i class="fa fa-calendar"></i>
 						<time>
-							<span>{{$events[1]->date}}</span>
-							<span>{{$events[1]->time}}</span>
+							<span>{{$events[0]->date}}</span>
+							<span>{{$events[0]->time}}</span>
 						</time>
 					</div>
 					<div class="even-info">
 						<i class="fa fa-map-marker"></i>
 						<p>
-							{{$events[1]->description}}
+							{{$events[0]->description}}
 						</p>
 					</div>
 				</section>
@@ -121,59 +110,66 @@
 			<article class="card fl-left">
 				<section class="date">
 					<time datetime="23th feb">
-						<span><?php echo explode("-", $events[2]->date)[2] ?></span>
-						<span><?php echo explode("-", $events[2]->date)[1] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
 					</time>
 				</section>
 				<section class="card-cont">
 
-					<h3>{{$events[2]->title}}</h3>
+					<h3>{{$events[0]->title}}</h3>
 					<div class="even-date">
 						<i class="fa fa-calendar"></i>
 						<time>
-							<span>{{$events[2]->date}}</span>
-							<span>{{$events[2]->time}}</span>
+							<span>{{$events[0]->date}}</span>
+							<span>{{$events[0]->time}}</span>
 						</time>
 					</div>
 					<div class="even-info">
 						<i class="fa fa-map-marker"></i>
 						<p>
-							{{$events[2]->description}}
+							{{$events[0]->description}}
 						</p>
 					</div>
 				</section>
 			</article>
-			<article class="card fl-left">
+				<article class="card fl-left">
 				<section class="date">
 					<time datetime="23th feb">
-						<span><?php echo explode("-", $events[3]->date)[2] ?></span>
-						<span><?php echo explode("-", $events[3]->date)[1] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
 					</time>
 				</section>
 				<section class="card-cont">
 
-					<h3>{{$events[3]->title}}</h3>
+					<h3>{{$events[0]->title}}</h3>
 					<div class="even-date">
 						<i class="fa fa-calendar"></i>
 						<time>
-							<span>{{$events[3]->date}}</span>
-							<span>{{$events[3]->time}}</span>
+							<span>{{$events[0]->date}}</span>
+							<span>{{$events[0]->time}}</span>
 						</time>
 					</div>
 					<div class="even-info">
 						<i class="fa fa-map-marker"></i>
 						<p>
-							{{$events[3]->description}}
+							{{$events[0]->description}}
 						</p>
 					</div>
 				</section>
 			</article>
 		</div>
 	</section>
+
+    <!-- events list section start -->
+
+
+    <section class="ftco-services ftco-no-pb">
+
 	<!-- event section closed -->
 
 
 	<section class="ftco-services ftco-no-pb">
+
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
@@ -318,7 +314,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-1.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/computer_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -326,12 +322,12 @@
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
 						</p> -->
 						<h3><a href="#">Computer Lab</a></h3>
-						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="physics_lab" class="btn btn-primary">Learn More</a></p>
+						<p>A computer lab is a space which provides computer services to a defined community. Computer labs are typically provided by libraries to the public, or to people affiliated with that institution.</p>
+						<p><a href="computer_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-2.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/physics_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -339,12 +335,12 @@
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
 						</p> -->
 						<h3><a href="#">Physics Lab</a></h3>
-						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						<p>In physics class, lab is central. Integral. Sacred. More than a mere place in the back of the classroom, the laboratory is the place where physics students do physics.</p>
+						<p><a href="physics_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-3.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/chemistry_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -352,12 +348,12 @@
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
 						</p> -->
 						<h3><a href="#">Chemistry Lab</a></h3>
-						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						<p>The Chemistry Laboratory conducts fundamental studies of highway materials to understand both failure mechanisms and the superior performance.</p>
+						<p><a href="chemistry_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/course-4.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/electronics_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -365,8 +361,8 @@
 							<span><i class="icon-calendar mr-2"></i>4 Years</span>
 						</p> -->
 						<h3><a href="#">Electronics Lab</a></h3>
-						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						<p>Electronics Laboratory is well equipped with sophisticated equipment’s to perform experiments on Diode and transistor based electronic circuit designs.</p>
+						<p><a href="electronics_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 			</div>
@@ -520,28 +516,28 @@
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/image_1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/course-1.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_1.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/image_2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/image_2.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_2.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/image_3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/image_3.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_3.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/image_4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/image_4.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_4.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
@@ -551,62 +547,9 @@
 		</div>
 	</section>
 
-
-	<footer class="ftco-footer ftco-bg-dark ftco-section">
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md-6 col-lg-4">
-					<div class="ftco-footer-widget mb-5">
-						<h2 class="ftco-heading-2">Where we are?</h2>
-						<div class="block-23 mb-3">
-							<ul>
-								<li><span class="icon icon-map-marker"></span><span class="text">Co-ordinates: 28.13°N 83.78°E, Panchamul-syangja, Gandaki Zone, Nepal</span></li>
-								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+ 063 522 611</span></a></li>
-								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@trishaheed.edu.np</span></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4">
-					<div class="ftco-footer-widget mb-5 ml-md-4">
-						<h2 class="ftco-heading-2">Links</h2>
-						<ul class="list-unstyled">
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<div class="ftco-footer-widget mb-5">
-						<h2 class="ftco-heading-2">Connect!</h2>
-
-					</div>
-					<div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-						<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/facebook.jpg); border"></div>
-					</div>
-					<div class="ftco-footer-widget mb-5">
-						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
-
-					<p>Developed with love <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Mohan & Kushal</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
+	
+	<!-- including the footer -->
+	<x-footer status="home" />
 
 
 	<!-- loader -->
@@ -616,6 +559,7 @@
 
 
 	<script src="<?php echo url('/'); ?>/js/jquery.min.js"></script>
+	
 	<script src="<?php echo url('/'); ?>/js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="<?php echo url('/'); ?>/js/popper.min.js"></script>
 	<script src="<?php echo url('/'); ?>/js/bootstrap.min.js"></script>

@@ -1,4 +1,4 @@
 <x-detail 
 imageUri="images/image_2.jpg" 
 title="Electronics Lab title"
-content="Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!" />
+content=" Electronics Laboratory is well equipped with sophisticated equipment’s to perform experiments on Diode and transistor based electronic circuit designs. The available equipment’s in this lab are CRO’s, Function Generators, Power supplies, Analog ammeters and Analog Voltmeters. This lab also has various digital IC’s and equipment’s like latest model Digital IC trainer Kits for performing Digital Logic Design experiments and projects." />

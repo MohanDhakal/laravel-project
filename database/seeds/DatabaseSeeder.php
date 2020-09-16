@@ -13,10 +13,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'Mohan Dhakal',
-            'username'=> 'mohan12',
-            'email' => 'mohandkl.512@gmail.com',
-            'password' => Hash::make('mohandkl@50'),
+            'name' => 'kushal',
+            'username'=> 'kushal',
+            'email' => 'kushaldhakal25@gmail.com',
+            'password' => Hash::make('hellokushal'),
         ]);
     }
 }

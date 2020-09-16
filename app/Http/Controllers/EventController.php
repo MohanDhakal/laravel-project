@@ -47,6 +47,7 @@ class EventController extends Controller
         $eventList = DB::table('events')->get();
         return $eventList;
     }
+
     public function deleteEventWithId($id)
     {
         $deleted = DB::delete('DELETE from events where id = ?', [$id]);
@@ -68,7 +69,7 @@ class EventController extends Controller
         $time = $request->input('editHour') . ':' . $request->input('editMinute') . ' ' . $request->input('editShift');
         $title = $request->editEventTitle;
         $id = $request->eventId;
-     
+
         $affected = DB::table('events')
             ->where('id', $id)
             ->update([

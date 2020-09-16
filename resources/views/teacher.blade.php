@@ -99,8 +99,8 @@
 						innerImageDiv.className = "img align-self-stretch";
 
 						innerImageDiv.style.backgroundImage = "url(" + staff.image_uri + ")";
-						innerImageDiv.style.width='250px';
-						
+						innerImageDiv.style.width = '250px';
+
 						innerImageDiv.style.margin = '10px';
 
 						var textFeildsDiv = document.createElement('div');

@@ -11,7 +11,7 @@ class GalleryController extends Controller
     public function index()
     {
 
-        return view('gallery');
+        return view('photo_gallery');
     }
 
     public function getImagesWithTag(Request $request)

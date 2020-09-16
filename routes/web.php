@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::view('about', 'about');
 Route::view('physics_lab', 'highlights/physics_lab');
 Route::view('chemistry_lab', 'highlights/chemistry_lab');
@@ -25,6 +26,13 @@ Route::view('userview', '/user');
 Route::view('/test', 'test');
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
+Route::view('/computer_lab', 'highlights/computer_lab');
+Route::view('/electronics_lab', 'highlights/electornics_lab');
+Route::view('/others_smc', 'others_smc');
+Route::view('/others_tpc', 'others_tpc');
+Route::view('/apply', 'apply');
+Route::view('/video_gallery', 'video_gallery');
+Route::view('/students', 'students');
 
 //send message in contact form
 Route::get('/contact', 'ContactFormController@index');
@@ -36,7 +44,8 @@ Route::post('/sendMessage', 'ContactFormController@create');
 Route::get('pickfile', 'UploadFile@index');
 Route::post('uploadfile', 'UploadFile@store');
 Auth::routes(['register' => false]);
-Route::get('gallery', 'GalleryController@index');
+Route::get('home', 'HomeController@index');
+Route::get('photo_gallery', 'GalleryController@index');
 
 //get data from database and show it to public
 
