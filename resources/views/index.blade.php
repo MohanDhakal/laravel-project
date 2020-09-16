@@ -24,39 +24,152 @@
 	<link rel="stylesheet" href="<?php echo url('/'); ?>/css/event.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 	<!-- including the header -->
 	<x-header status="home" />
-	<section class="home-slider owl-carousel">
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_1.jpg);">
-			<div class="container">
-				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Education: Numerous ways to aquire!</h1>
-						
-					</div>
-				</div>
-			</div>
-		</div>
+	 <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_1.jpg);">
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate">
+            <h1 class="mb-4">Education Needs Complete Solution</h1>
+          </div>
+        </div>
+        </div>
+      </div>
 
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_2.jpg);">
-			<div class="container">
-				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Learning: Not limited to Textbooks</h1>
-						
+      <div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_2.jpg);">
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate">
+            <h1 class="mb-4">University, College School Education</h1>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+	<!-- events list section start -->
+		<section class="col-lg-12 container bg-light m-2">
+		<h1>Recent Events</h1>
+		<div class="row ">
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
+
+					<h3>{{$events[0]->title}}</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$events[0]->date}}</span>
+							<span>{{$events[0]->time}}</span>
+						</time>
 					</div>
-				</div>
-			</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$events[0]->description}}
+						</p>
+					</div>
+				</section>
+			</article>
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
+
+					<h3>{{$events[0]->title}}</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$events[0]->date}}</span>
+							<span>{{$events[0]->time}}</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$events[0]->description}}
+						</p>
+					</div>
+				</section>
+			</article>
+		</div>
+		<div class="row ">
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
+
+					<h3>{{$events[0]->title}}</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$events[0]->date}}</span>
+							<span>{{$events[0]->time}}</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$events[0]->description}}
+						</p>
+					</div>
+				</section>
+			</article>
+				<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
+						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
+
+					<h3>{{$events[0]->title}}</h3>
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$events[0]->date}}</span>
+							<span>{{$events[0]->time}}</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$events[0]->description}}
+						</p>
+					</div>
+				</section>
+			</article>
 		</div>
 	</section>
+
     <!-- events list section start -->
 
 
     <section class="ftco-services ftco-no-pb">
+
+	<!-- event section closed -->
+
+
+	<section class="ftco-services ftco-no-pb">
+
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
@@ -210,7 +323,7 @@
 						</p> -->
 						<h3><a href="#">Computer Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="physics_lab" class="btn btn-primary">Learn More</a></p>
+						<p><a href="computer_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
@@ -223,7 +336,7 @@
 						</p> -->
 						<h3><a href="#">Physics Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						<p><a href="physics_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
@@ -236,7 +349,7 @@
 						</p> -->
 						<h3><a href="#">Chemistry Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						<p><a href="chemistry_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
@@ -249,7 +362,7 @@
 						</p> -->
 						<h3><a href="#">Electronics Lab</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						<p><a href="electronics_lab" class="btn btn-primary">Learn More</a></p>
 					</div>
 				</div>
 			</div>
@@ -434,10 +547,10 @@
 		</div>
 	</section>
 
-
 	
 	<!-- including the footer -->
 	<x-footer status="home" />
+
 
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">

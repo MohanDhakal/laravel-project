@@ -4,19 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use Facade\FlareClient\Stacktrace\File;
 use Illuminate\Support\Facades\Storage;
 
 class ResultRoutineController extends Controller
 {
 
-    public function index()
+  
+    public function showResultFiles()
     {
         $files = Storage::files('public/results');
-        return view('/file_download', ['files' => $files]);
-        //return the create nsew news page
-    }
+        return view('/file_download', ['files' => $files, 'tag' => 'Results']);
+        //return the create new news page
 
+    }
+    public function showRoutineFiles()
+    {
+        $files = Storage::files('public/routines');
+        return view('/file_download', ['files' => $files, 'tag' => 'Routines']);
+        //return the create new news page
+    }
     public function storeFile(Request $request)
     {
 
@@ -32,10 +38,13 @@ class ResultRoutineController extends Controller
         }
         return redirect(url()->previous() . '#resultroutine');
     }
-
-    public function downloadFile()
+    /**
+     * download the specified file.
+     * @param  string  $file
+     */
+    public function downloadFile($i, $tag)
     {
-        $files = Storage::files('public/results');
-        return Storage::download($files[0]);
+        $files = Storage::files('public/' . strtolower($tag));
+        return Storage::download($files[$i]);
     }
 }

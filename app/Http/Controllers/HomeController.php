@@ -24,6 +24,23 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view("admin.home");
+        //get the instance of staff controller
+        $staffInstance = new StaffController();
+
+        //get the instance of event controller
+        $eventInstance = new EventController();
+
+        //get the instace of news controller
+        $newsInstance = new NewsController();
+
+        $staffList = $staffInstance->getStaffInLimit();
+        $eventList = $eventInstance->getEventInLimit();
+        $newsList = $newsInstance->getNewsInLimit();
+
+        return view("admin.home", [
+            'staffList' => $staffList,
+            'eventList' => $eventList,
+            'newsList' => $newsList
+        ]);
     }
 }

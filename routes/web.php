@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::view('about', 'about');
-Route::view('gallery', 'gallery');
 Route::view('contact', 'contact');
 Route::view('physics_lab', 'highlights/physics_lab');
 Route::view('chemistry_lab', 'highlights/chemistry_lab');
@@ -29,12 +27,15 @@ Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
 Route::view('/others_smc', 'others_smc');
 Route::view('/others_tpc', 'others_tpc');
+Route::view('/apply', 'apply');
+Route::view('/video_gallery', 'video_gallery');
+Route::view('/students', 'students');
 
-Route::get('pickfile','UploadFile@index');
-Route::post('uploadfile','UploadFile@store');
+Route::get('pickfile', 'UploadFile@index');
+Route::post('uploadfile', 'UploadFile@store');
 Auth::routes(['register' => false]);
 Route::get('home', 'HomeController@index');
-Route::get('gallery', 'GalleryController@index');
+Route::get('photo_gallery', 'GalleryController@index');
 
 //get data from database and show it to public
 
@@ -42,10 +43,26 @@ Route::get('/blog', 'NewsController@index');
 Route::get('/blog-single/{id}', 'NewsController@showNewsDetail');
 Route::get('teacher', 'StaffController@index');
 
+//delete from database
+Route::get('/home/delete/news/{id}', 'NewsController@deleteNewsWithId');
+Route::get('/home/delete/staff/{id}', 'StaffController@deleteStaffWithId');
+Route::get('/home/delete/event/{id}', 'EventController@deleteEventWithId');
+
+//updating into the database
+
+//ajax response
+//--------for images---------
+Route::get('/getImages/{tag}', 'GalleryController@getImagesWithTag');
+
+//-------for staffs---------
+Route::get('/getStaffs/{tag}', 'StaffController@getStaffsWithTag');
+
+
+
 //store and view news admin
 Route::get('/news', 'NewsController@create');
 Route::post('/news', 'NewsController@storeNews');
-Route::view('/', '/index');
+Route::get('/', 'EventController@index');
 
 //store and view staff admin
 
@@ -60,8 +77,11 @@ Route::get('home', 'HomeController@index');
 
 //store routine and results
 Route::post('/resultroutine', 'ResultRoutineController@storeFile');
-Route::get('/results', 'ResultRoutineController@index');
-Route::get('/result', 'ResultRoutineController@downloadFile');
+
+//view and download results or routines
+Route::get('/results', 'ResultRoutineController@showResultFiles');
+Route::get('/routines', 'ResultRoutineController@showRoutineFiles');
+Route::get('/download/resultroutine/{id}/{tag}', 'ResultRoutineController@downloadFile');
 
 //user login and authentication
 Route::namespace('Auth')->group(function () {
@@ -75,5 +95,6 @@ Route::namespace('Auth')->group(function () {
     Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 
     //Reset Password Routes
-    Route::get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');   Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.update');
+    Route::get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
+    Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.update');
 });

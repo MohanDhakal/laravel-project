@@ -1,0 +1,19 @@
+@foreach($staffList as $staff)
+				<div class="col-md-6 col-lg-3 ftco-animate">
+					<div class="staff">
+						<div class="img-wrap d-flex align-items-stretch">
+							<div class="img align-self-stretch" style="background-image: url('{{$staff->image_uri}}');"></div>
+						</div>
+						<div class="text pt-3 text-center">
+							<h3>{{$staff->name}}</h3>
+							<span class="position mb-2">{{$staff->post}}</span>
+							<span class="position mb-2">{{$staff->subject}}</span>
+							<span class="position mb-2">{{$staff->phone}}</span>
+
+							<div class="faded">
+								<p>{{$staff->description}}.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				@endforeach

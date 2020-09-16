@@ -31,8 +31,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <style>
         body {
-            background: #f5f5f5;
-            font-family: 'Roboto', sans-serif;
+           
         }
 
         .table-responsive {
@@ -145,7 +144,7 @@
 </head>
 
 <body>
-    <x-header status="result" />
+    <x-header status="{{$tag}}" />
 
     <div class="container-xl">
         <div class="table-responsive">
@@ -153,14 +152,13 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2><b> Routines</b></h2>
+                            <h2><b> {{$tag}}</b></h2>
                         </div>
-
-                        <tr>
                     </div>
                 </div>
                 <table class="table table-striped table-hover">
                     <thead>
+                        <tr>
                             <th>#</th>
                             <th>Name</th>
                             <th>Action</th>
@@ -168,11 +166,17 @@
                     </thead>
                     <tbody>
                         @foreach($files as $file)
-                        
+
                         <tr data-status="active">
-                            <td><?php $i=1; echo $i++ ?></td>
+                            <td>
+                                <?php
+                                $i = 0;
+                                echo ++$i;
+                                ?>
+                            </td>
                             <td>{{$file}}</td>
-                            <td><a href="/result" class="btn btn-sm manage">Download</a></td>
+
+                            <td><a href="download/resultroutine/<?php echo --$i?>/{{$tag}}" class="btn btn-sm manage">Download</a></td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -180,6 +184,25 @@
             </div>
         </div>
     </div>
+    <!-- including the footer -->
+    <x-footer status="home" />
+
+    <script src="<?php echo url('/'); ?>/js/jquery.min.js"></script>
+    
+    <script src="<?php echo url('/'); ?>/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/popper.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.easing.1.3.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.stellar.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/owl.carousel.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.magnific-popup.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/aos.js"></script>
+    <script src="<?php echo url('/'); ?>/js/jquery.animateNumber.min.js"></script>
+    <script src="<?php echo url('/'); ?>/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="<?php echo url('/'); ?>/js/google-map.js"></script>
+    <script src="<?php echo url('/'); ?>/js/main.js"></script>
 </body>
 
 </html>
