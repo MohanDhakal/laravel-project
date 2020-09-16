@@ -71,29 +71,33 @@ class StaffController extends Controller
         $deleted = DB::delete('DELETE from staff where id = ?', [$id]);
         return redirect('/home');
     }
-    public function updateStaff( Request $request)
+    public function updateStaff(Request $request)
     {
-        $name = $request->input('name');
-        $description = $request->input('description');
-        $phone = $request->input('phone');
+        $input = $request->all();
+        $method = $request->method();
+        dd($input);
+
+        // $name = $request->input('name');
+        // $description = $request->input('description');
+        // $phone = $request->input('phone');
 
 
-        $post = $request->input('post', 'Staff');
-        $subject = $request->input('subject_of_study');
-        $level = $request->input('level');
+        // $post = $request->input('post', 'Staff');
+        // $subject = $request->input('subject_of_study');
+        // $level = $request->input('level');
 
-        $affected = DB::table('staff')
-            ->where('id', $request->input('staffId'))
-            ->update([
-                'name' => $name,
-                'description' => $description,
-                'post' => $post,
-                'phone' => $phone,
-                'level' => $level,
-                'subject' => $subject
-            ]);
+        // $affected = DB::table('staff')
+        //     ->where('id', $request->input('staffId'))
+        //     ->update([
+        //         'name' => $name,
+        //         'description' => $description,
+        //         'post' => $post,
+        //         'phone' => $phone,
+        //         'level' => $level,
+        //         'subject' => $subject
+        //     ]);
 
-        return redirect('/home#viewStaffs');
+        // return redirect('/home#viewStaffs');
     }
     public function getStaffsWithTag(Request $request)
     {

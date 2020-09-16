@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('about', 'about');
-Route::view('contact', 'contact');
 Route::view('physics_lab', 'highlights/physics_lab');
 Route::view('chemistry_lab', 'highlights/chemistry_lab');
 Route::view('header', 'components/header');
@@ -26,6 +25,13 @@ Route::view('userview', '/user');
 Route::view('/test', 'test');
 Route::view('/physics_lab', 'highlights/physics_lab');
 Route::view('/chemistry_lab', 'highlights/chemistry_lab');
+
+//send message in contact form
+Route::get('/contact', 'ContactFormController@index');
+Route::post('/sendMessage', 'ContactFormController@create');
+
+
+
 
 Route::get('pickfile', 'UploadFile@index');
 Route::post('uploadfile', 'UploadFile@store');
@@ -74,6 +80,7 @@ Route::post('/newstaff', 'StaffController@addStaff');
 //store and view event admin
 Route::get('/event', 'EventController@create');
 Route::post('/event', 'EventController@storeEvent');
+
 
 Route::get('home', 'HomeController@index');
 

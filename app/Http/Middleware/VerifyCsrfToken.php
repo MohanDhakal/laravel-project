@@ -12,6 +12,6 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        'localhost:8000/event/update/8'
+        'http://localhost:8000/event/update'
     ];
 }

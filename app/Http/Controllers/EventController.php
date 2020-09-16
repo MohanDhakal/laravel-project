@@ -52,17 +52,25 @@ class EventController extends Controller
         $deleted = DB::delete('DELETE from events where id = ?', [$id]);
         return redirect('/home');
     }
+    /**
+     * Update the existing event.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+
     public function updateEvent(Request $request)
     {
 
-        $title = $request->input('editEventTitle');
         $description = $request->input('editEventDescription');
         $venue = $request->input('editVenue');
         $date = $request->input('editDate');
         $time = $request->input('editHour') . ':' . $request->input('editMinute') . ' ' . $request->input('editShift');
-
+        $title = $request->editEventTitle;
+        $id = $request->eventId;
+     
         $affected = DB::table('events')
-            ->where('id', $request->input('eventId'))
+            ->where('id', $id)
             ->update([
                 'title' => $title,
                 'description' => $description,

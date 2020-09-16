@@ -13,6 +13,7 @@ class ResultRoutineController extends Controller
     public function showResultFiles()
     {
         $files = Storage::files('public/results');
+        
         return view('/file_download', ['files' => $files, 'tag' => 'Results']);
         //return the create new news page
 
