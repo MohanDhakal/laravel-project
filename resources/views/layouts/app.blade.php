@@ -129,6 +129,18 @@
             document.getElementById('editVenue').value = event.venue;
 
         }
+        function showStaffModal(staff){
+            $('#editStaffModal').modal();
+            document.getElementById('staffId').value = staff.id;
+            document.getElementById('editStaffName').value = staff.name;
+            document.getElementById('editStaffPhone').value = staff.phone;
+            document.getElementById('editStaffAddress').value = staff.address;
+            document.getElementById('editStaffDescription').value = staff.description;
+        }
+
+        function submitEditStaffForm(){
+            document.getElementById('editStaffModal').submit();
+        }
 
         function submitEditEventForm(id) {
 

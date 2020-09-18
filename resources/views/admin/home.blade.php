@@ -39,8 +39,9 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th>Address</th>
                                     <th>Post</th>
+                                    <th>Phone</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -70,10 +71,11 @@
 
                                 <tr>
                                     <td>{{$staff->name}}</td>
-                                    <td>{{$staff->description}}</td>
+                                    <td>{{$staff->address}}</td>
                                     <td>{{$staff->post}}</td>
+                                    <td>{{$staff->phone}}</td>
                                     <td>
-                                        <a href="#editStaffModal{{$staff->id}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                        <a href='#' onclick='showStaffModal(<?php echo json_encode($staff) ?>)' class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                         <a href="#deleteStaffModal{{$staff->id}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                     </td>
                                 </tr>
@@ -87,6 +89,89 @@
         </div>
     </div>
     <!-- staff table section end-->
+
+    <!-- edit staff section starts  -->
+    <div id="editStaffModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="post" action="/staff/update" id="editStaffForm">
+                    @csrf
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit Staff</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="editStaffName">Name</label>
+                            <input type="text" name="editStaffName" id="editStaffName" class="form-control" required>
+                            <input name="staffId" id="staffId" type="hidden">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="editStaffPhone">Phone Number</label>
+                            <input class="form-control" id="editStaffPhone" type="number" name="editStaffPhone">
+                        </div>
+                        <div class="form-group">
+                            <label for="editStaffPost">Post</label>
+                            <select name="editStaffPost" id="editStaffPost">
+                                <option value="Head Teacher">Head Teacher</option>
+                                <option value="Teacher">Teacher</option>
+                                <option value="Lab Assistant">Lab Assistant</option>
+                                <option value="Insructor">Instructor</option>
+                                <option value="Sub Instructor">Sub Instructor</option>
+                                <option value="Librarian">Librarian</option>
+                                <option value="Nursery Teacher">Nursery Teacher</option>
+                                <option value="Accountant">Accountant</option>
+                                <option value="School Helper">School Helper</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editStaffLevel">Level</label>
+                            <select name="editStaffLevel">
+                                <option value="hst1">मा.वि.दिृतिय</option>
+                                <option value="hst2">मा.वि.तृतिय</option>
+                                <option value="st1">नि.मा.वि.दृितिय</option>
+                                <option value="st2">नि.मा.वि.तृतिय</option>
+                                <option value="pr1">प्रा.वि.दृितिय</option>
+                                <option value="pr2">प्रा.वि.तृतिय</option>
+                                <option value="pr">प्रा.वि</option>
+                                <option value="other">Others</option>
+                                <option value="helper">School Helper</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_subject_of_study">Subject</label>
+                            <select name="edit_subject_of_study">
+                                <option value="none">None</option>
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="English">English</option>
+                                <option value="Social">Social</option>
+                                <option value="Science">Science</option>
+                                <option value="Account">Account</option>
+                                <option value="HPE">HPE</option>
+                                <option value="Nepali">Nepali</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Computer">Computer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editStaffAddress">Address</label>
+                            <textarea name="editStaffAddress" id="editStaffAddress" class="form-control editor"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="editStaffDescription">Description</label>
+                            <textarea name="editStaffDescription" id="editStaffDescription" class="form-control editor"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" onclick="submitEditStaffForm()" value="Save">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--edit staff section ends  -->
+
+
 
 
     <!-- events table section Start-->
@@ -154,6 +239,8 @@
         </div>
     </div>
     <!-- events table section end-->
+
+    <!--edit event section starts here-->
     <div id="editEventModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -228,9 +315,7 @@
         </div>
     </div>
 
-    <!--edit modal -->
 
-    <!--edit modal ends>
 
     <!-- news table section starts-->
     <div class="row justify-content-lg-end">
@@ -314,6 +399,7 @@
                             <div class="card-body">
                                 <!--form starts here-->
                                 <form method="POST" action="/news" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="form-row">
                                         <div class="name">News Title <span style="color: red"> &nbsp;*</span></div>
                                         <div class="value">
@@ -359,7 +445,6 @@
                                             <div class="label--desc">Upload your files:Max file size 10 MB</div>
                                         </div>
                                     </div>
-                                    @csrf
                                     <div class="card-footer">
                                         <button class=" btn btn--radius-2 btn--blue-2 " type="submit">Add Post
                                         </button>
@@ -556,6 +641,7 @@
                                         <option value="Science">Science</option>
                                         <option value="Account">Account</option>
                                         <option value="HPE">HPE</option>
+                                        <option value="Nepali">Nepali</option>
                                         <option value="Economics">Economics</option>
                                         <option value="Computer">Computer</option>
                                     </select>

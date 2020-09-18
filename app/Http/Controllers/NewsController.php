@@ -7,12 +7,17 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
     public function index()
     {
-        $newsList = DB::table('news')->get();
+        
+        $newsList = DB::table('news')->orderBy('created_at', 'desc')->get();
+        foreach ($newsList as $news) {
+            $news->image_uri = 'http://localhost:8000' . Storage::url($news->image_uri);
+        }
         return view('blog', ['newsList' => $newsList]);
     }
 
@@ -39,25 +44,25 @@ class NewsController extends Controller
 
         if ($file != null) {
             $fileName = $file->getClientOriginalName();
-            $file_path = $file->storeAs('public/notices', $dateTime->toDateTimeString() . $fileName);
+            $file_path = $file->storeAs('public/notices', str_replace(' ', '', $dateTime->toDateTimeString() . $fileName));
             $news->file_uri = $file_path;
         }
         if ($image != null) {
             $imageName = $image->getClientOriginalName();
-            $image_path = $image->storeAs('public/images', $dateTime->toDateTimeString() . $imageName);
+            $image_path = $image->storeAs('public/images', str_replace(' ', '', $dateTime->toDateTimeString() . $imageName));
             $news->image_uri = $image_path;
         }
         $news->title = $request->input('title');
         $news->content = $request->input('content');
-
         $news->save();
+
         return redirect('/blog');
     }
 
     public function showNewsDetail($id)
     {
         $news = DB::table('news')->find($id);
-
+        $news->image_uri = 'http://localhost:8000' . Storage::url($news->image_uri);
         return view('/blog-single', [
             'news' => $news
         ]);
@@ -84,5 +89,14 @@ class NewsController extends Controller
             ]);
 
         return redirect('/home#addNews');
+    }
+
+    /**
+     * download the specified file.
+     * @param  string  $fileName
+     */
+    public function downloadFile($fileName)
+    {
+        return   Storage::download('public/notices/' . $fileName);
     }
 }
