@@ -33,9 +33,9 @@ class HomeController extends Controller
         //get the instace of news controller
         $newsInstance = new NewsController();
 
-        $staffList = $staffInstance->getStaffInLimit();
-        $eventList = $eventInstance->getEventInLimit();
-        $newsList = $newsInstance->getNewsInLimit();
+        $staffList = $staffInstance->getStaffs();
+        $eventList = $eventInstance->getEvents();
+        $newsList = $newsInstance->getNews();
 
         return view("admin.home", [
             'staffList' => $staffList,

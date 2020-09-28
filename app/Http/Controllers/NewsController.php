@@ -62,10 +62,9 @@ class NewsController extends Controller
             'news' => $news
         ]);
     }
-    public function  getNewsInLimit($startLimit = 1, $endLimit = 5)
+    public function  getNews()
     {
-        $newsList = DB::select('SELECT * FROM news
-        WHERE id BETWEEN :start AND :end', ['start' => $startLimit, 'end' => $endLimit]);
+        $newsList = DB::table('news')->get();
         return $newsList;
     }
 

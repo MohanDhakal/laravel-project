@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Bootstrap Data Table with Filter Row Feature</title>
+    <title>Tri Shaheed Model Secondary School</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -30,10 +30,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <style>
-        body {
-           
-        }
-
         .table-responsive {
             margin: 30px 0;
         }
@@ -61,6 +57,8 @@
         }
 
         .table-title {
+            background: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
             min-width: 100%;
             border-bottom: 1px solid #e9e9e9;
             padding-bottom: 15px;
@@ -165,18 +163,24 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         @foreach($files as $file)
 
                         <tr data-status="active">
                             <td>
+                                {{($loop->index)}}
+                            </td>
+                            <td>
                                 <?php
-                                $i = 0;
-                                echo ++$i;
+                                if (strpos($file, 'result')) {
+                                    echo str_replace('public/results/', '', $file);
+                                } else {
+                                    echo str_replace('public/routines/', '', $file);
+                                }
                                 ?>
                             </td>
-                            <td>{{$file}}</td>
 
-                            <td><a href="download/resultroutine/<?php echo --$i?>/{{$tag}}" class="btn btn-sm manage">Download</a></td>
+                            <td><a href="download/resultroutine/{{$loop->index}}/{{$tag}}" class="btn btn-sm manage">Download</a></td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -1,10 +1,13 @@
 <div class="bg-top navbar-light">
 	<div class="container-fluid">
 		<div class="row no-gutters d-flex align-items-center align-items-stretch">
-			<div class="col-md-4 d-flex align-items-center py-4">
-				<a class="navbar-brand" href="<?php echo url('/'); ?>">Tri Shaheed. <span>Model School</span></a>
+			<div class="col-md-1 d-flex align-items-center py-4" >
+				<img src="http://localhost:8000/images/logo.png" height="80px" width="80px"/>
 			</div>
-			<div class="col-lg-8 d-block">
+			<div class="col-md-4 d-flex align-items-center py-4">
+				<a class="navbar-brand" href="<?php echo url('/'); ?>">Tri-Shaheed. <span>Secodary Model School</span></a>
+			</div>
+			<div class="col-lg-7 d-block">
 				<div class="row d-flex">
 					<div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
 						<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
@@ -33,7 +36,7 @@
 	</div>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" style="width:100%;white-space: nowrap;" id="ftco-navbar">
-		<div class="container-fluid d-flex align-items-center" >
+		<div class="container-fluid d-flex align-items-center">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
@@ -136,7 +139,7 @@
 					
 					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
 					<li class="nav-item "><a href="<?php echo url('students'); ?>" class="nav-link">Students</a></li>
-					<li class="nav-item "><a href="<?php echo url('photo_gallery'); ?>" class="nav-link">Photo gallery</a></li>
+					<li class="nav-item active"><a href="<?php echo url('photo_gallery'); ?>" class="nav-link">Photo gallery</a></li>
 					<li class="nav-item "><a href="<?php echo url('video_gallery'); ?>" class="nav-link">Video gallery</a></li>
 					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
 					
@@ -160,7 +163,7 @@
 					<li class="nav-item "><a href="<?php echo url('teacher'); ?>" class="nav-link">Staff</a></li>
 					<li class="nav-item "><a href="<?php echo url('students'); ?>" class="nav-link">Students</a></li>
 					<li class="nav-item "><a href="<?php echo url('photo_gallery'); ?>" class="nav-link">Photo gallery</a></li>
-					<li class="nav-item "><a href="<?php echo url('video_gallery'); ?>" class="nav-link">Video gallery</a></li>
+					<li class="nav-item active"><a href="<?php echo url('video_gallery'); ?>" class="nav-link">Video gallery</a></li>
 					<li class="nav-item "><a href="<?php echo url('blog'); ?>" class="nav-link">Blog</a></li>
 					
 					<li class="nav-item "><a href="<?php echo url('results'); ?>" class="nav-link">Results</a></li>

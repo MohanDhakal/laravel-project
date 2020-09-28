@@ -46,14 +46,13 @@
 
     <x-header status="photo_gallery" />
     <!-- Page Content -->
-    <!-- <button onclick="getMessage('anniversary')" value="getImage" id="getImage">Anniversary</button> -->
     <div class="container">
         <div class="row">
             <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2 class="gallery-title">Gallery</h2>
             </div>
             <div>
-                <button onclick="getMessage('all')" id="getImage" class="btn btn-default filter-button" data-filter="all">all</button>
+                <button onclick="getMessage('all')" class="btn btn-default filter-button" data-filter="all">all</button>
                 <button onclick="getMessage('anniversary')" class="btn btn-default filter-button" data-filter="Anniversary">Anniversary</button>
                 <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
                 <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
@@ -87,18 +86,25 @@
     <script src="<?php echo url('/'); ?>/js/gallery.js"></script>
 
     <script>
-        function getMessage(tag) {
-
-
-
+        function getMessage(filterTag) {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-Token': $('meta[name=_token]').attr('content')
+                }
+            });
             $.ajax({
                 type: 'GET',
-                url: '/getImages/' + tag,
-                data: '_token = <?php echo csrf_token() ?>',
+                url: '/getImages',
+                data: {
+                    tag: filterTag,
+                    _token: "<?php echo csrf_token() ?>",
+                },
                 success: function(imageList) {
                     $('#parent').empty();
-                    imageList.forEach(myImage => {
 
+                    imageList.forEach(myImage => {
+                        
+                        // console.log(myImage.absolute_url);
                         //create a sub-parent div
                         var mydiv = document.createElement('div');
                         mydiv.id = "newImage".concat(myImage.id);
@@ -117,7 +123,6 @@
                         imageElement.className = "zoom img-fluid ";
 
                         //getting parent row and appending child 
-
                         var parent = document.getElementById('parent');
                         parent.appendChild(mydiv).appendChild(myAnchor).appendChild(imageElement);
 

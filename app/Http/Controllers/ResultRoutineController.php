@@ -13,6 +13,7 @@ class ResultRoutineController extends Controller
     public function showResultFiles()
     {
         $files = Storage::files('public/results');
+        
         return view('/file_download', ['files' => $files, 'tag' => 'Results']);
         //return the create new news page
 
@@ -38,6 +39,7 @@ class ResultRoutineController extends Controller
         }
         return redirect(url()->previous() . '#resultroutine');
     }
+    
     /**
      * download the specified file.
      * @param  string  $file

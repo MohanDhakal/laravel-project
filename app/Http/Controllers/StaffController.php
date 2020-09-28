@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Staff;
 use Carbon\Carbon;
-
+use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -14,17 +14,23 @@ class StaffController extends Controller
 {
     public function index()
     {
-        return view('teacher');
+        $staffList = DB::table('staff')->get();
+        foreach ($staffList as $staff) {
+            $staff->image_uri = Storage::url($staff->image_uri);
+        }
+        return view('teacher', ['staffList' => $staffList]);
     }
 
     public function create()
     {
         return view('admin.home');
+        //return the create new news page
     }
     public function addStaff(Request $request)
     {
 
-        //if validation fails, it will be redirected to the same page
+
+        //if validation fails, it will redirected to the same page
 
         $validatedData = $request->validate([
             'name' => 'required',
@@ -35,8 +41,7 @@ class StaffController extends Controller
         $dateTime = Carbon::now();
         $image = $request->file('image_uri');
         $imageName = $image->getClientOriginalName();
-        $image_path = $image->storeAs('public/images', $dateTime->toDateTimeString() . $imageName);
-
+        $image_path = $image->storeAs('public/images', str_replace(' ', '', $dateTime->toDateTimeString() . $imageName));
 
         //get all the staff values from form and store it in model
         $staff = new Staff();
@@ -44,8 +49,8 @@ class StaffController extends Controller
         $staff->address = $request->input('address');
         $staff->description = $request->input('description');
         $staff->phone = $request->input('phone');
-
         $staff->image_uri = $image_path;
+
 
         $staff->post = $request->input('post', 'Staff');
         $staff->subject = $request->input('subject_of_study');
@@ -56,10 +61,9 @@ class StaffController extends Controller
         return redirect('/teacher');
     }
 
-    public function getStaffInLimit($startLimit = 1, $endLimit = 5)
+    public function getStaffs()
     {
-        $staffList = DB::select('SELECT * FROM staff
-        WHERE id BETWEEN :start AND :end', ['start' => $startLimit, 'end' => $endLimit]);
+        $staffList = DB::table('staff')->get();
         return $staffList;
     }
     public function deleteStaffWithId($id)
@@ -67,34 +71,52 @@ class StaffController extends Controller
         $deleted = DB::delete('DELETE from staff where id = ?', [$id]);
         return redirect('/home');
     }
-    public function updateStaff($id, $name, $description, $post)
+    public function updateStaff(Request $request)
     {
+        $input = $request->all();
+        $method = $request->method();
+        dd($input);
 
-        $affected = DB::table('staff')
-            ->where('id', $id)
-            ->update([
-                'name' => $name,
-                'description' => $description,
-                'post' => $post
-            ]);
+        // $name = $request->input('name');
+        // $description = $request->input('description');
+        // $phone = $request->input('phone');
 
-        return redirect('/home#addStaff');
+
+        // $post = $request->input('post', 'Staff');
+        // $subject = $request->input('subject_of_study');
+        // $level = $request->input('level');
+
+        // $affected = DB::table('staff')
+        //     ->where('id', $request->input('staffId'))
+        //     ->update([
+        //         'name' => $name,
+        //         'description' => $description,
+        //         'post' => $post,
+        //         'phone' => $phone,
+        //         'level' => $level,
+        //         'subject' => $subject
+        //     ]);
+
+        // return redirect('/home#viewStaffs');
     }
-    public function getStaffsWithTag($tag)
+    public function getStaffsWithTag(Request $request)
     {
-        if ($tag = 'all') {
+        $tag = $request->tag;
+        if ($tag == 'all') {
             $staffList = DB::table('staff')->get();
             foreach ($staffList as $staff) {
-                $staff->image_uri = Storage::url($staff->image_uri);
+                $staff->image_uri = 'http://localhost:8000' . Storage::url($staff->image_uri);
             }
 
             return response()->json($staffList, 200);
         } else {
-            $staffList = DB::table('staff')->where('level', $tag);
+            $staffList = DB::table('staff')->where('level', $tag)->get();
+
             foreach ($staffList as $staff) {
-                $staff->image_uri = Storage::url($staff->image_uri);
+                $staff->image_uri = 'http://localhost:8000' . Storage::url($staff->image_uri);
             }
             return response()->json($staffList, 200);
         }
+        return;
     }
 }

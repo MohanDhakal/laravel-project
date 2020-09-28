@@ -118,6 +118,22 @@
                 format: 'LT'
             });
         });
+
+        function showModal(event) {
+            console.log(event.id);
+            $('#editEventModal').modal();
+            document.getElementById('editEventTitle').value = event.title;
+            document.getElementById('eventId').value = event.id;
+            document.getElementById('editEventDescription').value = event.description;
+            document.getElementById('editDate').value = event.date;
+            document.getElementById('editVenue').value = event.venue;
+
+        }
+
+        function submitEditEventForm(id) {
+
+            document.getElementById(id).submit();
+        }
     </script>
 
 </body>

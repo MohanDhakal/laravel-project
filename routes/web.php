@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::view('about', 'about');
-Route::view('contact', 'contact');
 Route::view('physics_lab', 'highlights/physics_lab');
 Route::view('chemistry_lab', 'highlights/chemistry_lab');
 Route::view('header', 'components/header');
@@ -32,6 +33,13 @@ Route::view('/others_tpc', 'others_tpc');
 Route::view('/apply', 'apply');
 Route::view('/video_gallery', 'video_gallery');
 Route::view('/students', 'students');
+
+//send message in contact form
+Route::get('/contact', 'ContactFormController@index');
+Route::post('/sendMessage', 'ContactFormController@create');
+
+
+
 
 Route::get('pickfile', 'UploadFile@index');
 Route::post('uploadfile', 'UploadFile@store');
@@ -50,14 +58,21 @@ Route::get('/home/delete/news/{id}', 'NewsController@deleteNewsWithId');
 Route::get('/home/delete/staff/{id}', 'StaffController@deleteStaffWithId');
 Route::get('/home/delete/event/{id}', 'EventController@deleteEventWithId');
 
-//updating into the database
+//content editing routes for admin
+
+Route::post('/event/update', 'EventController@updateEvent');
+Route::post('/staff/update', 'StaffController@updateStaff');
+
 
 //ajax response
+
 //--------for images---------
-Route::get('/getImages/{tag}', 'GalleryController@getImagesWithTag');
+Route::get('/getImages/', 'GalleryController@getImagesWithTag');
 
 //-------for staffs---------
-Route::get('/getStaffs/{tag}', 'StaffController@getStaffsWithTag');
+Route::get('/getStaffs/', 'StaffController@getStaffsWithTag');
+
+
 
 
 
@@ -74,6 +89,7 @@ Route::post('/newstaff', 'StaffController@addStaff');
 //store and view event admin
 Route::get('/event', 'EventController@create');
 Route::post('/event', 'EventController@storeEvent');
+
 
 Route::get('home', 'HomeController@index');
 
