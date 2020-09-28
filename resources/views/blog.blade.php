@@ -27,23 +27,26 @@
 <body>
   <!-- including the header -->
   <x-header status="blog" />
-
-
-  <section class="ftco-section bg-light">
     <div class="container">
       <div class="row">
         @foreach($newsList as $news)
         <div class="col-md-6 col-lg-4 ftco-animate">
+
           <div class="blog-entry">
-            <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('<?php echo url('/'); ?>/images/image_2.jpg');">
+            @if($news->image_uri!="/storage/")
+            <a href="#" class="block-20 d-flex align-items-end" style="background-image: url('<?php echo url('http://localhost:8000'); ?>{{$news->image_uri}}');">
             </a>
+            @else
+            <a href="#" class="block-20 d-flex align-items-end" style="background-image: url(<?php echo url('/'); ?>/images/banner_1.jpg);">
+            </a>
+            @endif
             <div class="text bg-white p-4">
               <h3 class="heading"><a href="#">{{$news->title}}</a></h3>
               <?php echo $news->content ?>
               <div class="d-flex align-items-center mt-4">
                 <p class="mb-0"><a href="blog-single/{{$news->id}}" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                 <p class="ml-auto mb-0">
-                  <span><?php echo explode(" ", $news->created_at)[0];?></span>
+                  <span><?php echo explode(" ", $news->created_at)[0]; ?></span>
                 </p>
               </div>
             </div>
@@ -55,7 +58,7 @@
     </div>
   </section>
 
-<!-- including the footer -->
+  <!-- including the footer -->
   <x-footer status="home" />
 
 

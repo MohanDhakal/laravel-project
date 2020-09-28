@@ -59,7 +59,7 @@
                 <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
             </div>
         </div>
-        <div class="row" id="parent">
+        <div class="row ftco-gallery" id="parent">
             <!-- content here comes from ajax through javascript code -->
         </div>
     </div>
@@ -103,7 +103,7 @@
                     $('#parent').empty();
 
                     imageList.forEach(myImage => {
-                        
+
                         // console.log(myImage.absolute_url);
                         //create a sub-parent div
                         var mydiv = document.createElement('div');
@@ -113,7 +113,7 @@
                         //creating anchor tag
                         var myAnchor = document.createElement('a');
                         myAnchor.href = myImage.absolute_url;
-                        myAnchor.className = 'fancybox';
+                        myAnchor.className = 'fancybox gallery image-popup img d-flex align-items-center';
                         myAnchor.rel = 'lightbox';
 
                         //creating img tag
@@ -122,7 +122,7 @@
                         imageElement.src = myImage.absolute_url;
                         imageElement.className = "zoom img-fluid ";
 
-                        //getting parent row and appending child 
+                        //getting parent row and appending child
                         var parent = document.getElementById('parent');
                         parent.appendChild(mydiv).appendChild(myAnchor).appendChild(imageElement);
 

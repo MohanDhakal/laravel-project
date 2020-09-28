@@ -11,8 +11,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $eventList = DB::table('events')->orderBy('date', 'asc')->get();
-
+        $eventList = DB::table('events')->orderBy('date', 'desc')->limit(2)->get();
         return view('/index', ['events' => $eventList]);
     }
 
@@ -26,7 +25,6 @@ class EventController extends Controller
     {
         $validatedData = $request->validate([
             'title1' => 'required',
-            'description1' => 'bail|required|max:255',
             'date' => 'required',
             'venue' => 'required'
         ]);
@@ -39,7 +37,7 @@ class EventController extends Controller
         $event->date = $request->input('date');
         $event->time = $request->input('hour') . ':' . $request->input('minute') . ' ' . $request->input('shift');
         $event->save();
-        return redirect('/');
+        return redirect('/home#viewEvents');
     }
 
     public function  getEvents()
@@ -51,7 +49,7 @@ class EventController extends Controller
     public function deleteEventWithId($id)
     {
         $deleted = DB::delete('DELETE from events where id = ?', [$id]);
-        return redirect('/home');
+        return redirect('/home#viewEvents');
     }
     /**
      * Update the existing event.

@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="755b1700-5bcc-4802-85dd-a6b578b56a60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Event.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ResultRoutineController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_29_084947_create_event_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Student.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_22_073957_create_students_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/uploads/119178056_157780102621795_6272168970268991357_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/uploads/book.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/uploads/thumbs/119178056_157780102621795_6272168970268991357_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/uploads/thumbs/book.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lara_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lara_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_28_114912_create_staff_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_28_114912_create_staff_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/event.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/event.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/sb-admin-2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/sb-admin-2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/sb-admin-2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/sb-admin-2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/add_news.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog-single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog-single.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teacher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teacher.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/photo_gallery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/photo_gallery.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +133,9 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gff88Rrgo2w3rMf1KOjhcdaYkM" />
@@ -156,10 +150,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="/var/www/html/lara_app" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/public/js" />
@@ -188,6 +185,8 @@
       <workItem from="1598715843076" duration="748000" />
       <workItem from="1598756256053" duration="5769000" />
       <workItem from="1598841765644" duration="13236000" />
+      <workItem from="1600572538888" duration="84000" />
+      <workItem from="1600755651317" duration="5924000" />
     </task>
     <servers />
   </component>
@@ -206,6 +205,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="416" y="121" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598691324990" />
+    <state x="466" y="121" width="424" height="479" key="FileChooserDialogImpl" timestamp="1600572618202">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="466" y="121" width="424" height="479" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600572618202" />
     <state x="501" y="289" width="354" height="142" key="NewPhpFileDialog" timestamp="1598589732946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -218,9 +221,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598690934886" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598856902803">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600761785124">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598856902803" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600761785124" />
   </component>
 </project>
