@@ -51,6 +51,10 @@ Route::get('photo_gallery', 'GalleryController@index');
 
 Route::get('/blog', 'NewsController@index');
 Route::get('/blog-single/{id}', 'NewsController@showNewsDetail');
+Route::get('notice/download/{fileName}', 'NewsController@downloadFile');
+
+
+
 Route::get('teacher', 'StaffController@index');
 
 //delete from database

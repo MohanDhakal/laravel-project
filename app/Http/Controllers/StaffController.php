@@ -58,7 +58,7 @@ class StaffController extends Controller
 
 
         $staff->save();
-        return redirect('/teacher');
+        return redirect()->back();
     }
 
     public function getStaffs()
@@ -73,31 +73,31 @@ class StaffController extends Controller
     }
     public function updateStaff(Request $request)
     {
-        $input = $request->all();
-        $method = $request->method();
-        dd($input);
+        // $input = $request->all();
+        // $method = $request->method();
+        // dd($input);
 
-        // $name = $request->input('name');
-        // $description = $request->input('description');
-        // $phone = $request->input('phone');
+        $name = $request->input('editStaffName');
+        $description = $request->input('editStaffDescription');
+        $phone = $request->input('editStaffPhone');
+        $post = $request->input('editStaffPost');
+        $subject = $request->input('subject_of_study');
+        $level = $request->input('editStaffLevel');
+        $address = $request->input('editStaffAddress');
 
+        $affected = DB::table('staff')
+            ->where('id', $request->input('staffId'))
+            ->update([
+                'name' => $name,
+                'description' => $description,
+                'post' => $post,
+                'phone' => $phone,
+                'level' => $level,
+                'subject' => $subject,
+                'address' => $address
+            ]);
 
-        // $post = $request->input('post', 'Staff');
-        // $subject = $request->input('subject_of_study');
-        // $level = $request->input('level');
-
-        // $affected = DB::table('staff')
-        //     ->where('id', $request->input('staffId'))
-        //     ->update([
-        //         'name' => $name,
-        //         'description' => $description,
-        //         'post' => $post,
-        //         'phone' => $phone,
-        //         'level' => $level,
-        //         'subject' => $subject
-        //     ]);
-
-        // return redirect('/home#viewStaffs');
+        return redirect('/home#viewStaffs');
     }
     public function getStaffsWithTag(Request $request)
     {

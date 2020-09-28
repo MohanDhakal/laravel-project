@@ -69,7 +69,7 @@ class EventController extends Controller
         $time = $request->input('editHour') . ':' . $request->input('editMinute') . ' ' . $request->input('editShift');
         $title = $request->editEventTitle;
         $id = $request->eventId;
-     
+
         $affected = DB::table('events')
             ->where('id', $id)
             ->update([
@@ -83,4 +83,3 @@ class EventController extends Controller
         return redirect('/home#viewEvents');
     }
 }
-

@@ -4,6 +4,7 @@
 <head>
 	<title>Tri Shaheed Model School</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -25,6 +26,11 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -309,12 +315,11 @@
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
 					<h2 class="mb-4"><span>Some</span> Highlights</h2>
-					<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/computer_lab.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/labs/computer_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -327,7 +332,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/physics_lab.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/labs/physics_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -340,7 +345,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/chemistry_lab.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/labs/chemistry_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -353,7 +358,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/electronics_lab.jpg);"></div>
+					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/labs/electronics_lab.jpg);"></div>
 					<div class="text pt-4">
 						<!-- <p class="meta d-flex">
 							<span><i class="icon-user mr-2"></i>Mr. Khan</span>
@@ -370,67 +375,12 @@
 	</section>
 
 
-	{{--<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(<?php echo url('/'); ?>/images/bg_5.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row justify-content-end">
-				<div class="col-md-6 py-5 px-md-5">
-					<div class="py-md-5">
-						<div class="heading-section heading-section-white ftco-animate mb-5">
-							<h2 class="mb-4">Send Us Your Query</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-						<form action="#" class="appointment-form ftco-animate">
-							<div class="d-md-flex">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="First Name">
-								</div>
-								<div class="form-group ml-md-4">
-									<input type="text" class="form-control" placeholder="Last Name">
-								</div>
-							</div>
-							<div class="d-md-flex">
-								<div class="form-group">
-									<div class="form-field">
-										<div class="select-wrap">
-											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-											<select name="" id="" class="form-control">
-												<option value="">Select The Topic</option>
-												<option value="">Art Lesson</option>
-												<option value="">Language Lesson</option>
-												<option value="">Music Lesson</option>
-												<option value="">Sports</option>
-												<option value="">Other Services</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="form-group ml-md-4">
-									<input type="text" class="form-control" placeholder="Phone">
-								</div>
-							</div>
-							<div class="d-md-flex">
-								<div class="form-group">
-									<textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
-								</div>
-								<div class="form-group ml-md-4">
-									<input type="submit" value="Submit Your Query" class="btn btn-primary py-3 px-4">
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
---}}
-
 	<section class="ftco-section testimony-section bg-light">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
 					<h2 class="mb-4">Student Says About Us</h2>
-					<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+					
 				</div>
 			</div>
 			<div class="row ftco-animate justify-content-center">
@@ -438,29 +388,15 @@
 					<div class="carousel-testimony owl-carousel">
 						<div class="item">
 							<div class="testimony-wrap d-flex">
-								<div class="user-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/teacher-1.jpg)">
+								<div class="user-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/student_says/kushal.jpg)">
 								</div>
 								<div class="text ml-2">
 									<span class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p class="name">Racky Henderson</p>
-									<span class="position">Father</span>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap d-flex">
-								<div class="user-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/teacher-2.jpg)">
-								</div>
-								<div class="text ml-2">
-									<span class="quote d-flex align-items-center justify-content-center">
-										<i class="icon-quote-left"></i>
-									</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p class="name">Henry Dee</p>
-									<span class="position">Mother</span>
+									<p>I had the opportunity to study in this School and I’m really thankful with them because of the great teachers, staff always smiling and helping you with your stuff. Academically is grant! I’ve improved my level so I strongly recommend it.</p>
+									<p class="name">Kushal Dhakal</p>
+									<span class="position">Student</span>
 								</div>
 							</div>
 						</div>
@@ -473,36 +409,8 @@
 										<i class="icon-quote-left"></i>
 									</span>
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p class="name">Mark Huff</p>
-									<span class="position">Mother</span>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap d-flex">
-								<div class="user-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/teacher-4.jpg)">
-								</div>
-								<div class="text ml-2">
-									<span class="quote d-flex align-items-center justify-content-center">
-										<i class="icon-quote-left"></i>
-									</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p class="name">Rodel Golez</p>
-									<span class="position">Mother</span>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap d-flex">
-								<div class="user-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/teacher-1.jpg)">
-								</div>
-								<div class="text ml-2">
-									<span class="quote d-flex align-items-center justify-content-center">
-										<i class="icon-quote-left"></i>
-									</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p class="name">Ken Bosh</p>
-									<span class="position">Mother</span>
+									<p class="name">Sunil Chhetri</p>
+									<span class="position">Student</span>
 								</div>
 							</div>
 						</div>
@@ -516,28 +424,28 @@
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_1.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_1.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_1.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_2.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_2.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_2.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_3.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_3.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url("<?php echo url('/'); ?>/images/footer_3.jpg");">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_4.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_4.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_4.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>

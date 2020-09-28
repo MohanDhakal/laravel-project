@@ -43,7 +43,7 @@
               <div class="d-flex align-items-center mt-4">
                 <p class="mb-0"><a href="blog-single/{{$news->id}}" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                 <p class="ml-auto mb-0">
-                  <span>3 hours ago </span>
+                  <span><?php echo explode(" ", $news->created_at)[0];?></span>
                 </p>
               </div>
             </div>
