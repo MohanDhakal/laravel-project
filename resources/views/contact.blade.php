@@ -106,7 +106,6 @@
       </div>
     </div>
   </section>
-
   <!-- including the footer -->
   <x-footer status="home" />
 
