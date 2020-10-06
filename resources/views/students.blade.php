@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-
-
     <title>Tri Shaheed Model School</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,11 +32,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
-
-
 
 
     <style>
@@ -283,13 +276,12 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-9">
-
+                        <div class="col-sm-2 mt-2" id="count">TOTAL: </div>
+                        <div class="col-sm-7">
                             <div class="filter-group">
                                 <label for="search">Search</label>
                                 <input type="text" name="search" id="search" class="form-control" />
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -297,54 +289,20 @@
                     <thead>
                         <tr role="row">
                             <th>#</th>
-                            <th class="sorting_asc" tabindex="0" aria-controls="student_details" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 300px;">Name</th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="student_details" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 300px;">Name
+                            </th>
                             <th>Date of Birth</th>
                             <th>Adress</th>
                             <th>Category</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Kushal Dhakal</td>
-                            <td>2054-02-21</td>
-                            <td>Aandhikhola-1, Syangja</td>
-                            <td>Technical</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Mohan Dhakal</td>
-                            <td>2055-02-21</td>
-                            <td>Aandhikhola-1, Syangja</td>
-                            <td>Technical</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Kushal Dhakal</td>
-                            <td>2054-02-21</td>
-                            <td>Aandhikhola-1, Syangja</td>
-                            <td>Technical</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Kushal Dhakal</td>
-                            <td>2054-02-21</td>
-                            <td>Aandhikhola-1, Syangja</td>
-                            <td>Technical</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Kushal Dhakal</td>
-                            <td>2054-02-21</td>
-                            <td>Aandhikhola-1, Syangja</td>
-                            <td>Technical</td>
-                        </tr>
+                    <tbody id="parent">
                     </tbody>
                 </table>
+                <div id="errorMessage"></div>
             </div>
         </div>
     </div>
-    <script src="/Users/admin/Downloads/student_details.js"></script>
     <!-- including the footer -->
     <x-footer status="home" />
 
@@ -385,7 +343,71 @@
                     }
                 });
             }
+            getStudentDetail();
+            $("select.form-control").change(getStudentDetail);
         });
+
+
+        function getStudentDetail() {
+
+            var selectedClass = $(this).children("option:selected").val();
+            if (selectedClass == null) selectedClass = 1;
+            console.log(selectedClass);
+
+            $.ajax({
+                type: 'GET',
+                url: '/getStudents',
+                data: {
+                    grade: selectedClass,
+                    _token: "<?php echo csrf_token() ?>",
+                },
+                success: function(studentList) {
+                    $('#errorMessage').empty();
+                    $('#parent').empty();
+                    var sr = 1;
+                    $('#count').text('TOTAL: ' + studentList.length);
+                    if (studentList.length == 0) {
+                        //getting parent row and appending child
+                        var errorDiv = document.getElementById('errorMessage');
+                        errorDiv.innerText = 'No Detail available for this class';
+
+                    } else {
+                        studentList.forEach(student => {
+                            //create a sub-parent div
+                            var myTr = document.createElement('tr');
+                            myTr.id = "newStudent".concat(student.id);
+
+                            //creating table data                      
+                            var sn = document.createElement('td');
+                            var name = document.createElement('td');
+                            var address = document.createElement('td');
+                            var category = document.createElement('td');
+                            var dob = document.createElement('td');
+
+                            //appending column to rows
+                            myTr.appendChild(sn);
+                            myTr.appendChild(name);
+                            myTr.appendChild(dob);
+                            myTr.appendChild(address);
+                            myTr.appendChild(category);
+
+                            //adding values to column
+                            sn.innerText = sr++;
+                            name.innerText = student.name;
+                            address.innerText = student.address;
+                            dob.innerText = student.dob;
+                            category.innerText = student.category;
+
+                            //getting parent row and appending child
+                            var parent = document.getElementById('parent');
+                            parent.appendChild(myTr);
+
+                        });
+                    }
+
+                }
+            });
+        }
     </script>
 </body>
 

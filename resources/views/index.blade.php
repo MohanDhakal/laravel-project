@@ -28,150 +28,74 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<!-- including the header -->
 	<x-header status="home" />
-	 <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_1.jpg);">
-        <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Education Needs Complete Solution</h1>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_2.jpg);">
-        <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">University, College School Education</h1>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-	<!-- events list section start -->
-		<section class="col-lg-12 container bg-light m-2">
-		<h1>Recent Events</h1>
-		<div class="row ">
-			<article class="card fl-left">
-				<section class="date">
-					<time datetime="23th feb">
-						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
-						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
-					</time>
-				</section>
-				<section class="card-cont">
-
-					<h3>{{$events[0]->title}}</h3>
-					<div class="even-date">
-						<i class="fa fa-calendar"></i>
-						<time>
-							<span>{{$events[0]->date}}</span>
-							<span>{{$events[0]->time}}</span>
-						</time>
+	<section class="home-slider owl-carousel">
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_1.jpg);">
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+					<div class="col-md-6 ftco-animate">
+						<h1 class="mb-4">Education Needs Complete Solution</h1>
 					</div>
-					<div class="even-info">
-						<i class="fa fa-map-marker"></i>
-						<p>
-							{{$events[0]->description}}
-						</p>
-					</div>
-				</section>
-			</article>
-			<article class="card fl-left">
-				<section class="date">
-					<time datetime="23th feb">
-						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
-						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
-					</time>
-				</section>
-				<section class="card-cont">
-
-					<h3>{{$events[0]->title}}</h3>
-					<div class="even-date">
-						<i class="fa fa-calendar"></i>
-						<time>
-							<span>{{$events[0]->date}}</span>
-							<span>{{$events[0]->time}}</span>
-						</time>
-					</div>
-					<div class="even-info">
-						<i class="fa fa-map-marker"></i>
-						<p>
-							{{$events[0]->description}}
-						</p>
-					</div>
-				</section>
-			</article>
+				</div>
+			</div>
 		</div>
-		<div class="row ">
-			<article class="card fl-left">
-				<section class="date">
-					<time datetime="23th feb">
-						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
-						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
-					</time>
-				</section>
-				<section class="card-cont">
 
-					<h3>{{$events[0]->title}}</h3>
-					<div class="even-date">
-						<i class="fa fa-calendar"></i>
-						<time>
-							<span>{{$events[0]->date}}</span>
-							<span>{{$events[0]->time}}</span>
-						</time>
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_2.jpg);">
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+					<div class="col-md-6 ftco-animate">
+						<h1 class="mb-4">University, College School Education</h1>
 					</div>
-					<div class="even-info">
-						<i class="fa fa-map-marker"></i>
-						<p>
-							{{$events[0]->description}}
-						</p>
-					</div>
-				</section>
-			</article>
-				<article class="card fl-left">
-				<section class="date">
-					<time datetime="23th feb">
-						<span><?php echo explode("-", $events[0]->date)[2] ?></span>
-						<span><?php echo explode("-", $events[0]->date)[1] ?></span>
-					</time>
-				</section>
-				<section class="card-cont">
-
-					<h3>{{$events[0]->title}}</h3>
-					<div class="even-date">
-						<i class="fa fa-calendar"></i>
-						<time>
-							<span>{{$events[0]->date}}</span>
-							<span>{{$events[0]->time}}</span>
-						</time>
-					</div>
-					<div class="even-info">
-						<i class="fa fa-map-marker"></i>
-						<p>
-							{{$events[0]->description}}
-						</p>
-					</div>
-				</section>
-			</article>
+				</div>
+			</div>
 		</div>
 	</section>
 
-    <!-- events list section start -->
+	@if(count($events)>=1)
+	<!-- events list section start -->
+	<section class="col-lg-12 container bg-light m-2">
+		<h1>Recent Events</h1>
+		<div class="row">
+			@foreach($events as $event)
+			<article class="card fl-left">
+				<section class="date">
+					<time datetime="23th feb">
+						<span><?php echo explode("-", $event->date)[2] ?></span>
+						<span><?php echo explode("-", $event->date)[1] ?></span>
+					</time>
+				</section>
+				<section class="card-cont">
 
+					<h3>{{$event->title}}</h3>
+					@if(is_null($event->description)!==true)
+					<p>{{$event->description}}</p>
+					@endif
 
-    <section class="ftco-services ftco-no-pb">
+					<div class="even-date">
+						<i class="fa fa-calendar"></i>
+						<time>
+							<span>{{$event->date}}</span>
+							<span>{{$event->time}}</span>
+						</time>
+					</div>
+					<div class="even-info">
+						<i class="fa fa-map-marker"></i>
+						<p>
+							{{$event->venue}}
+						</p>
+					</div>
+				</section>
+			</article>
+			@endforeach
+		</div>
+	</section>
 
-	<!-- event section closed -->
+	@endif
+	<!-- events list section ends -->
 
 
 	<section class="ftco-services ftco-no-pb">
@@ -314,7 +238,7 @@
 		<div class="container-fluid px-4">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
-					<h2 class="mb-4"><span>Some</span> Highlights</h2>
+					<h2 class="mb-4"><span>Organised </span> Laboratory</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -374,88 +298,101 @@
 		</div>
 	</section>
 
-
-	<section class="ftco-section testimony-section bg-light">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-2">
-				<div class="col-md-8 text-center heading-section ftco-animate">
-					<h2 class="mb-4">Student Says About Us</h2>
-					
-				</div>
-			</div>
-			<div class="row ftco-animate justify-content-center">
-				<div class="col-md-12">
-					<div class="carousel-testimony owl-carousel">
-						<div class="item">
-							<div class="testimony-wrap d-flex">
-								<div class="user-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/student_says/kushal.jpg)">
-								</div>
-								<div class="text ml-2">
-									<span class="quote d-flex align-items-center justify-content-center">
-										<i class="icon-quote-left"></i>
-									</span>
-									<p>I had the opportunity to study in this School and I’m really thankful with them because of the great teachers, staff always smiling and helping you with your stuff. Academically is grant! I’ve improved my level so I strongly recommend it.</p>
-									<p class="name">Kushal Dhakal</p>
-									<span class="position">Student</span>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap d-flex">
-								<div class="user-img mr-4" style="background-image: url(<?php echo url('/'); ?>/images/teacher-3.jpg)">
-								</div>
-								<div class="text ml-2">
-									<span class="quote d-flex align-items-center justify-content-center">
-										<i class="icon-quote-left"></i>
-									</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p class="name">Sunil Chhetri</p>
-									<span class="position">Student</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4">Student Says About Us</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/student_says/kushal.jpg)">
+                  </div>
+                  <div class="text ml-2">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>I had the opportunity to study in this School and I’m really thankful with them because of the great teachers, staff always smiling and helping you with your stuff. Academically is grant! I’ve improved my level so I strongly recommend it.</p>
+					<p class="name">Kushal Dhakal</p>
+					<span class="position">Student</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/student_says/mohan.jpg)">
+                  </div>
+                  <div class="text ml-2">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>I spent almost 6 years of my childhood at Tri-Shaheed.Qualified teachers,suitable environment and well-matured infrastructure really helped me acheive my goal.I am currently pursuing my Software Engineering degree.</p>
+					<p class="name">Mohan Kumar Dhakal</p>
+					<span class="position">Former Student</span>
+                  </div>
+                </div>
+              </div>
+              
+             
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/teacher-1.jpg)">
+                  </div>
+                  <div class="text ml-2">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Sunil Chhetri</p>
+                    <span class="position">Student</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 	<section class="ftco-gallery">
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_1.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_1.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_1.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/footer_1.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_2.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_2.jpg);">
+					<a href="<?php echo url('/'); ?>/images/footer_2.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/footer_2.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_3.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url("<?php echo url('/'); ?>/images/footer_3.jpg");">
-						<div class="icon mb-4 d-flex align-items-center justify-content-center">
-							<span class="icon-instagram"></span>
-						</div>
-					</a>
+					<a href="<?php echo url('/'); ?>/images/footer_3.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/footer_3.jpg);"> <div class="icon mb-4 d-flex align-items-center justify-content-center">
+						<span class="icon-instagram"></span>
 				</div>
-				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_4.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer_4.jpg);">
-						<div class="icon mb-4 d-flex align-items-center justify-content-center">
-							<span class="icon-instagram"></span>
-						</div>
-					</a>
-				</div>
+				</a>
 			</div>
+			<div class="col-md-3 ftco-animate">
+				<a href="<?php echo url('/'); ?>/images/footer_4.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/footer_4.jpg);">
+					<div class="icon mb-4 d-flex align-items-center justify-content-center">
+						<span class="icon-instagram"></span>
+					</div>
+				</a>
+			</div>
+		</div>
 		</div>
 	</section>
 
-	
+
 	<!-- including the footer -->
 	<x-footer status="home" />
 
@@ -467,7 +404,7 @@
 
 
 	<script src="<?php echo url('/'); ?>/js/jquery.min.js"></script>
-	
+
 	<script src="<?php echo url('/'); ?>/js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="<?php echo url('/'); ?>/js/popper.min.js"></script>
 	<script src="<?php echo url('/'); ?>/js/bootstrap.min.js"></script>

@@ -76,6 +76,7 @@ Route::get('/getImages/', 'GalleryController@getImagesWithTag');
 //-------for staffs---------
 Route::get('/getStaffs/', 'StaffController@getStaffsWithTag');
 
+Route::get('/getStudents/', 'StudentController@getStudentsOfClass');
 
 
 

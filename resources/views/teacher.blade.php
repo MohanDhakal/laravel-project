@@ -52,12 +52,10 @@
 		</div>
 	</section>
 
-<<<<<<< HEAD
+
 	<!-- including the footer -->
 	<x-footer status="home" />
 
-=======
->>>>>>> b16adf604d674288dbb257f591df52ae9b1937a8
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />

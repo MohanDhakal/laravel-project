@@ -16,7 +16,7 @@ class NewsController extends Controller
         
         $newsList = DB::table('news')->orderBy('created_at', 'desc')->get();
         foreach ($newsList as $news) {
-            $news->image_uri = 'http://localhost:8000' . Storage::url($news->image_uri);
+            $news->image_uri = Storage::url($news->image_uri);
         }
         return view('blog', ['newsList' => $newsList]);
     }
@@ -62,7 +62,7 @@ class NewsController extends Controller
     public function showNewsDetail($id)
     {
         $news = DB::table('news')->find($id);
-        $news->image_uri = 'http://localhost:8000' . Storage::url($news->image_uri);
+        $news->image_uri =  Storage::url($news->image_uri);
         return view('/blog-single', [
             'news' => $news
         ]);

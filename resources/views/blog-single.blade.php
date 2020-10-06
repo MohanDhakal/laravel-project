@@ -46,24 +46,26 @@
         <div class="col-lg-8 ftco-animate">
           <h2 class="mb-3">{{$news->title}}</h2>
 
-          @if($news->image_uri!=='')
+          @if($news->image_uri!="/storage/")
           <p>
-            <img src="{{$news->image_uri}}" class="img-fluid">
+            <img src="http://localhost:8000{{$news->image_uri}}" class="img-fluid">
           </p>
+          @else
+          <p>
+            <img src="<?php url('/')?>/images/banner_1.jpg" class="img-fluid">
+          </p> 
           @endif
 
           <div id="content">
             <?php echo $news->content ?>
           </div>
 
-          @if($news->file_uri!=='')
+          @if(is_null($news->file_uri)!==true)
           <h4 style="color:tomato;margin-left:10px">Download Notice</h4>
           <div style="background-color:#f6f6f6; margin-left:10px;">
             <?php
-            if ($news->file_uri !== null) {
               echo str_replace('public/notices/', '', $news->file_uri);
               $news->file_uri = str_replace('public/notices/', '', $news->file_uri);
-            }
             ?>
             <a href='{{url("notice/download/".$news->file_uri)}}' style="color:DodgerBlue;" class="btn btn-sm manage">Download</a>
           </div>
@@ -72,7 +74,7 @@
         </div>
         <!-- .col-md-8 -->
         <div class="col-lg-4 sidebar ftco-animate">
-<!-- 
+          <!-- 
           <div class="sidebar-box ftco-animate">
             <h3>Popular Articles</h3>
             <div class="block-21 mb-4 d-flex">
