@@ -25,28 +25,27 @@
 					</div>
 					<div class="col-md topper d-flex align-items-center justify-content-end">
 						<p class="mb-0">
-							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">New Notice</button>
-        				<!-- Modal -->
-        					<div id="myModal" class="modal fade" role="dialog">
-            					<div class="modal-dialog modal-lg">
+							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">नयॉ सुचना</button>
 
-                					<!-- Modal content-->
-                					<div class="modal-content">
-                    				<div class="modal-header">
-                        			<button type="button" class="close" data-dismiss="modal">&times;</button>
-                    			</div>
-                    		<div class="modal-body">
+							<!-- Modal -->
+							<div id="myModal" class="modal fade" role="dialog">
+								<div class="modal-dialog modal-lg">
 
-                        	<embed href="<?php echo url('/'); ?>"><img src="http://localhost:8000/notice/latest.pdf" frameborder="0" width="100%" height="100%">
+									<!-- Modal content-->
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+										<div class="modal-body">
+											<embed src="http://localhost:8000/notice/latest.pdf" frameborder="0" width="100%" height="450px"/>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
 
-                        	<div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        	</div>
-                    	</div>
-
-                			</div>
-            			</div>
-        			</div>
+									</div>
+								</div>
+							</div>
 						</p>
 					</div>
 				</div>

@@ -26,31 +26,79 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 </head>
 
 <body>
 	<!-- including the header -->
 	<x-header status="home" />
 	<section class="home-slider owl-carousel">
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_1.jpg);">
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner/2.jpg);">
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">Education Needs Complete Solution</h1>
+						<!-- <h1 class="mb-4">University, College School Education</h1> -->
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner_2.jpg);">
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner/3.jpg);">
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">University, College School Education</h1>
+						<!-- <h1 class="mb-4">University, College School Education</h1> -->
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner/1.jpg);">
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+					<div class="col-md-6 ftco-animate">
+						<!-- <h1 class="mb-4">Education Needs Complete Solution</h1> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner/4.jpg);">
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+					<div class="col-md-6 ftco-animate">
+						<!-- <h1 class="mb-4">University, College School Education</h1> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-item" style="background-image:url(<?php echo url('/'); ?>/images/banner/5.jpg);">
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+					<div class="col-md-6 ftco-animate">
+						<!-- <h1 class="mb-4">University, College School Education</h1> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+	
+
+	<section class="ftco-section ftco-no-pt ftc-no-pb">
+		<div class="container-fluid">
+			<div class="row d-flex">
+				<div class="col-md-3 wrap-about d-flex align-items-justify">
+					<div class="img" style="border-radius:5%; margin-top: 10px; background-image: url(<?php echo url('/'); ?>/images/staff/principle.jpg);"></div>
+				</div>
+				<div class="col-md-8 wrap-about py-5 ftco-animate">
+					<h2 class="mb-4">प्रधानाध्यापकको सन्देश</h2>
+					<blockquote class="blockquote">
+						<p>“ गुणस्तरीय र प्राविधिक शिक्षा, आजको आवश्यकता ” भन्ने तथ्यलाई हृदयंगम गर्दै सूचना तथा प्रविधिको प्रयोग वालमैत्री वातावरणमा विद्यार्थी केन्द्रित विधि मार्फत आधुनिक युगअनुसारको अंग्रेजी र नेपाली माध्यममा कक्षा नर्सरी देखि १२ सम्म साधारण र प्राविधिक धार अन्तरगतको गुणस्तरीय शिक्षा प्रदान गर्दै आइरहेको नमुना विद्यालयको रुपमा विकसित यस श्री त्रि-शहीद मा.वि.पञ्चमूलमा अध्ययन गरेका र अध्ययनरत सम्पूणर् विद्यार्थीहरु, सेवा निवृत्त एवं सेवारत शिक्षकहरु, अमूल्य योगदान दिनु हुने अभिभावकज्यूहरु प्रति हार्दिक शुभे्च्छा व्यक्त गर्दछु र समायानुकुल परिवर्तन हुदै आधुनिक युगअनुसारको प्रविधियुक्त शिक्षा प्रदान गरिरहेको यस विद्यालयको उत्तरोत्तर प्रगतिको कामना गर्दछु ।</p>
+					</blockquote>
+				</div>
+
 			</div>
 		</div>
 	</section>
@@ -150,91 +198,8 @@
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-no-pt ftc-no-pb">
-		<div class="container">
-			<div class="row d-flex">
-				<div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-					<div class="img" style="background-image: url(<?php echo url('/'); ?>/images/about.jpg); border"></div>
-				</div>
-				<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-					<h2 class="mb-4">Principle Message</h2>
-					<blockquote class="blockquote">
-						<p>मनसुन पिक चरणबाट बिस्तारै ओरालो लाग्दै गएकाले भारी वर्षाको सम्भावनासमेत कम हुँदै महाशाखाले जनाएको छ। महाशाखाले ५० मिलिमिटरभन्दा धेरै वर्षा भएको क्षेत्रलाई भारी वर्षाको रुपमा मापन गर्दै आएको छ। नेपालमा मनसुन १० जुनदेखि सुरु भई २३ सेप्टेम्बरमा सकिने भएकाले अब मनसुन सकिन ४० दिन बाँकी छ। .</p>
-					</blockquote>
-				</div>
 
-			</div>
-		</div>
-	</section>
-
-
-	<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(<?php echo url('/'); ?>/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-2 d-flex">
-				<div class="col-md-6 align-items-stretch d-flex">
-					<div class="img img-video d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/about-2.jpg);">
-						<div class="video justify-content-center">
-							<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
-								<span class="ion-ios-play"></span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-					<h2 class="mb-4">Tri Shaheed Model School</h2>
-					<p>मनसुन पिक चरणबाट बिस्तारै ओरालो लाग्दै गएकाले भारी वर्षाको सम्भावनासमेत कम हुँदै महाशाखाले जनाएको छ। महाशाखाले ५० मिलिमिटरभन्दा धेरै वर्षा भएको क्षेत्रलाई भारी वर्षाको रुपमा मापन गर्दै आएको छ। नेपालमा मनसुन १० जुनदेखि सुरु भई २३ सेप्टेम्बरमा सकिने भएकाले अब मनसुन सकिन ४० दिन बाँकी छ। .</p>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-				</div>
-			</div>
-			<div class="row d-md-flex align-items-center justify-content-center">
-				<div class="col-lg-12">
-					<div class="row d-md-flex align-items-center">
-						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate ">
-							<div class="block-18">
-								<div class="icon"><span class="flaticon-doctor"></span></div>
-								<div class="text">
-									<strong class="number" data-number="18">0</strong>
-									<span>Certified Teachers</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18">
-								<div class="icon"><span class="flaticon-doctor"></span></div>
-								<div class="text">
-									<strong class="number" data-number="401">0</strong>
-									<span>Students</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18">
-								<div class="icon"><span class="flaticon-doctor"></span></div>
-								<div class="text">
-									<strong class="number" data-number="30">0</strong>
-									<span>Courses</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18">
-								<div class="icon"><span class="flaticon-doctor"></span></div>
-								<div class="text">
-									<strong class="number" data-number="50">0</strong>
-									<span>Awards Won</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<section class="ftco-section">
-		<style background: orange></style>
+	<section class="ftco-section" style="background-color:#f2f2f2">
 		<div class="container-fluid px-4">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
@@ -297,7 +262,6 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
@@ -362,35 +326,46 @@
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_1.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/footer_1.jpg);">
+
+					<a href="<?php echo url('/'); ?>/images/footer/1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/1.jpg);">
+
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_2.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/footer_2.jpg);">
+
+					<a href="<?php echo url('/'); ?>/images/footer/1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/2.jpg);">
+
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="<?php echo url('/'); ?>/images/footer_3.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/footer_3.jpg);"> <div class="icon mb-4 d-flex align-items-center justify-content-center">
-						<span class="icon-instagram"></span>
+
+					<a href="<?php echo url('/'); ?>/images/footer/1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/3.jpg);">
+
+						<div class="icon mb-4 d-flex align-items-center justify-content-center">
+							<span class="icon-instagram"></span>
+						</div>
+					</a>
 				</div>
-				</a>
+				<div class="col-md-3 ftco-animate">
+
+					<a href="<?php echo url('/'); ?>/images/footer/1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/4.jpg);">
+
+						<div class="icon mb-4 d-flex align-items-center justify-content-center">
+							<span class="icon-instagram"></span>
+						</div>
+					</a>
+				</div>
+
 			</div>
-			<div class="col-md-3 ftco-animate">
-				<a href="<?php echo url('/'); ?>/images/footer_4.JPG" class="gallery image-popup img d-flex align-items-center" style="background-image: url(<?php echo url('/'); ?>/images/footer/footer_4.jpg);">
-					<div class="icon mb-4 d-flex align-items-center justify-content-center">
-						<span class="icon-instagram"></span>
-					</div>
-				</a>
-			</div>
-		</div>
 		</div>
 	</section>
+
 
 
 	<!-- including the footer -->

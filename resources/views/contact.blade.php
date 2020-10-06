@@ -28,7 +28,7 @@
 <body>
   <x-header status="contact" />
 
-  <section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo url('/'); ?>/images/bg_1.jpg');">
+  <section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo url('/'); ?>/images/banner/2.jpg');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -106,7 +106,10 @@
       </div>
     </div>
   </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> dff4ecff3d06c6b95a856a69551a621c56562da3
   <!-- including the footer -->
   <x-footer status="home" />
 
